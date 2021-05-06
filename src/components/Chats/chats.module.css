@@ -1,6 +1,30 @@
-.chats{
-    width: 20%;
-    height: 100vh;
-    background-color: rgb(230, 230, 230);
+* {
+  box-sizing: border-box;
+}
 
+.chats {
+  width: 20%;
+  height: 100vh;
+  background-color: #ecf1f5;
+  padding: 30px;
+}
+
+.contact-card {
+  width: 100%;
+  background-color: white;
+  padding: 15px;
+  margin-top: 2px;
+}
+
+.contact-names {
+  font-weight: bold;
+}
+
+.contacts-search input {
+  width: 100%;
+    border-color: #dedede;
+}
+
+.contacts-search {
+    margin-bottom: 30px;
 }
