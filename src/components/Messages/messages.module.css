@@ -1,5 +1,121 @@
 .messages{
     width: 60%;
     height: 100vh;
-    background-color: rgb(242, 242, 242);
+
+}
+
+.header{
+    display: flex;
+    width: 100%;
+}
+
+.header-center-block{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.header-center-block span{
+    font-size: 20px;
+    color: grey;
+
+}
+
+.messageSearch{
+    display: flex;
+    border-radius: 5px;
+
+
+}
+
+.messageSearch:hover{
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+}
+
+.messageSearch input{
+    display: flex;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+
+.messageAuthorName{
+    display: flex;
+    align-items: center;
+    margin-right: 160px;
+
+}
+
+.messageAuthorNameTitle{
+    font-weight: 500;
+
+
+}
+
+.messageAuthorNameOnline span {
+    color: rgba(159, 226, 191);
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.messagesModal{
+    width: 100%;
+    height: 85%;
+    margin-top: 2px;
+    overflow-y: scroll;
+}
+
+.writeMessage{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px  solid #DEDEDE;
+
+
+
+}
+.messageSendForm{
+    width: 80%;
+}
+
+
+
+.messageSendForm input{
+    width: 90%;
+    height: 30px;
+    margin-top: 13px;
+    margin-left: 1%;
+    border: none;
+    outline: none;
+    font-weight: 500;
+
+}
+
+.messageWriteRightBlock{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    ;
+}
+
+.clip span{
+    font-size: 25px;
+    color: rgb(148,146,146);
+    cursor: pointer;
+
+}
+
+.microphone span{
+    font-size: 25px;
+    color: rgb(148,146,146);
+    margin-left: 10px;
+    cursor: pointer;
 }
