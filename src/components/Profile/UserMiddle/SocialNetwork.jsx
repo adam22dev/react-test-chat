@@ -1,8 +1,7 @@
 import style from '../profile.module.css';
 
-function SocialNetwork () {
+function SocialNetwork() {
   return (
-
     <div className={style.socialnetwork}>
       <ul>
         <li>@usename</li>
@@ -10,6 +9,6 @@ function SocialNetwork () {
         <li>@usename</li>
       </ul>
     </div>
-  )
+  );
 }
-export default SocialNetwork
+export default SocialNetwork;

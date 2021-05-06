@@ -1,63 +1,61 @@
-.profile{
-    width: 20%;
-    height: 100vh;
-    background-color: #ecf1f5;
-
+.profile {
+  width: 20%;
+  height: 100vh;
+  background-color: #ecf1f5;
 }
-.userinfo{
-    margin-left: 35%;
-    margin-top: 10%;
+.userinfo {
+  margin-left: 35%;
+  margin-top: 10%;
 }
-.avatar{
-    text-align: center;
-    color: red;
-    background-color: cadetblue;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    line-height: 100px;
+.avatar {
+  text-align: center;
+  color: red;
+  background-color: cadetblue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  line-height: 100px;
 }
-.username{
-    padding: 20px 0px;
-    color: grey;
-    font-weight: bold;
+.username {
+  padding: 20px 0px;
+  color: grey;
+  font-weight: bold;
 }
-.iconuser{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 5px 0px;
+.iconuser {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 5px 0px;
 }
-.litteicon{
-    padding: 0px 10px;
+.litteicon {
+  padding: 0px 10px;
 }
-ul{
-    list-style: none;
-    font-size: 16px;
-    padding: 0px 35px;
-    box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
-
+ul {
+  list-style: none;
+  font-size: 16px;
+  padding: 0px 35px;
+  box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
 }
-li{
-    padding: 15px 0px;
+li {
+  padding: 15px 0px;
 }
-.socialnetwork{
-    background-color: white;
-    width: 300px;
-    margin: auto;
-    border-radius: 5px;
+.socialnetwork {
+  background-color: white;
+  width: 300px;
+  margin: auto;
+  border-radius: 5px;
 }
-.socialmedia{
-    margin-top: 30%;
+.socialmedia {
+  margin-top: 30%;
 }
-span{
-    padding-left: 30px;
+span {
+  padding-left: 30px;
 }
-.heading{
-    font-size: 24px;
-    font-weight: bold;
-}.profile{
-    width: 20%;
-    height: 100vh;
-
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+.profile {
+  width: 20%;
+  height: 100vh;
 }

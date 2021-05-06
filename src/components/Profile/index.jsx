@@ -7,22 +7,18 @@ import Media from './UserLow/Media';
 import { loadProfile } from '../../redux/ducks/application';
 import { useDispatch, useSelector } from 'react-redux';
 
-
-
-
 function Profile(props) {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadProfile())
-  }, [])
-  const prf = useSelector(state => state.profile)
+    dispatch(loadProfile());
+  }, []);
+  const prf = useSelector((state) => state.profile);//ПРОБЛЕМА
   return (
     <div className={style.profile}>
       <UserInfo />
-      <ConnectionUser/>
-      <SocialMedia/>
-      <Media/>
+      <ConnectionUser />
+      <SocialMedia />
+      <Media />
     </div>
   );
 }
