@@ -6,21 +6,38 @@ import SocialMedia from './UserMiddle/SocialMedia';
 import Media from './UserLow/Media';
 import { loadProfile } from '../../redux/ducks/application';
 import { useDispatch, useSelector } from 'react-redux';
+import { logger } from 'redux-logger/src';
 
 function Profile(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadProfile());
   }, []);
-  const prf = useSelector((state) => state.profile);//ПРОБЛЕМА
+  const profile = useSelector((state) => state.application.profile);
+  const load = useSelector(state => state.application.loading)
+
   return (
-    <div className={style.profile}>
-      <UserInfo />
-      <ConnectionUser />
-      <SocialMedia />
-      <Media />
-    </div>
-  );
-}
+        <div className={style.profile}>
+          <UserInfo prf={profile}/>
+          <ConnectionUser />
+          <SocialMedia prf={profile}/>
+          <Media />
+        </div>
+      )
+    }
+
 
 export default Profile;
+//КОД НЕ ДЕЙСВУЕТ
+//return (
+//    (load ? ("ТУТ ДОЛЖЕН БЫТЬ СКЕЛЕТ") :  (profile.map(prf => {
+//     return (
+//       <div className={style.profile}>
+//         <UserInfo prf={prf}/>
+//         <ConnectionUser />
+//         <SocialMedia prf={prf}/>
+//         <Media />
+//       </div>
+//     )
+//   })
+// )));

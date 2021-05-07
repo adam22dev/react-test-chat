@@ -4,52 +4,60 @@
   background-color: #ecf1f5;
 }
 .userinfo {
-  margin-left: 35%;
+  text-align: center;
   margin-top: 10%;
 }
 .avatar {
   text-align: center;
-  color: red;
-  background-color: cadetblue;
+  color: white;
+  background-color: #87CEEB;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 100px;
+  font-size: 2.4em;
 }
 .username {
-  padding: 20px 0px;
+  padding: 6% 0%;
   color: grey;
   font-weight: bold;
+  font-size: 1.1em;
 }
 .iconuser {
   display: flex;
   text-align: center;
   justify-content: center;
-  padding: 5px 0px;
+  padding: 3% 0%;
 }
 .litteicon {
-  padding: 0px 10px;
+  padding: 0% 3%;
 }
 ul {
   list-style: none;
   font-size: 16px;
-  padding: 0px 35px;
-  box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
+  padding: 0% 23%;
 }
 li {
-  padding: 15px 0px;
+  padding: 10% 0%;
+  width: 100px;
+  height: 50px;
+
+
 }
 .socialnetwork {
   background-color: white;
-  width: 300px;
+  width: 80%;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 2%;
+  box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
 }
 .socialmedia {
   margin-top: 30%;
 }
 span {
-  padding-left: 30px;
+  padding-left: 10%;
 }
 .heading {
   font-size: 24px;
@@ -59,3 +67,31 @@ span {
   width: 20%;
   height: 100vh;
 }
+.color{
+  color: red;
+}
+.fullname{
+  text-align: center;
+  padding-top: 7%;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.media{
+  display: flex;
+  align-items: center;
+}
+.nameofsocial{
+  padding: 0% 10%;
+}
+.folder{
+  height: 50%;
+}
+.folders{
+  background-color: white;
+height: 15%;
+  width: 80%;
+  margin: auto;
+  border-radius: 2%;
+  box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
+}
+

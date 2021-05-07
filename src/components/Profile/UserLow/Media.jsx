@@ -2,7 +2,7 @@ import style from '../profile.module.css';
 import Folder from './Folder';
 function Media() {
   return (
-    <div>
+    <div className={style.folder}>
       <span className={style.heading}>Media</span>
       <Folder />
     </div>
