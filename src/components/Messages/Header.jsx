@@ -9,7 +9,6 @@ function Header(props) {
   const contacts  = useSelector(state=>state.contacts.items[0])
   const contactsId = useSelector(state=>state.contacts.items._id)
 
-  console.log(contacts)
 
   return (
     <div className={styles.header}>
