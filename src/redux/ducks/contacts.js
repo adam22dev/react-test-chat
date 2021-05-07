@@ -4,7 +4,7 @@ const initialState = {
   loading: false,
 };
 
-export default function contacts(state = initialState, action) {
+export default function contacts (state = initialState, action) {
   switch (action.type) {
     case 'contacts/load/start':
       return {
