@@ -16,6 +16,8 @@ function Profile(props) {
   const profile = useSelector((state) => state.application.profile);
   const load = useSelector(state => state.application.loading)
 
+  console.log(profile)
+
   return (
         <div className={style.profile}>
           <UserInfo prf={profile}/>
