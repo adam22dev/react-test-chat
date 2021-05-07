@@ -1,7 +1,16 @@
 import React from 'react';
 import styles from './messages.module.css';
+import { useSelector } from 'react-redux';
+import { application, contacts } from '../../redux/ducks';
 
 function Header(props) {
+  const profile  = useSelector(state=>state.application.profile)
+  const profileId = useSelector(state=>state.application.profile._id)
+  const contacts  = useSelector(state=>state.contacts.items[0])
+  const contactsId = useSelector(state=>state.contacts.items._id)
+
+  console.log(contacts)
+
   return (
     <div className={styles.header}>
       <div className={styles['header-center-block']}>
