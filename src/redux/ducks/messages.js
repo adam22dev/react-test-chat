@@ -2,6 +2,7 @@ const initialState = {
   items: [],
   loading: false,
   filter: '',
+  messageText: '',
 };
 
 export default function messages(state = initialState, action) {
@@ -23,10 +24,18 @@ export default function messages(state = initialState, action) {
         ...state,
         filter: action.payload
       }
+    case 'DELETE':
+      return {
+        ...state,
+        items: state.items.filter(item=>item._id !== action.payload)
+      }
+
     default:
       return state;
   }
 }
+
+//подгрузка комментариев
 
 export const loadMessages = (id) => {
   return dispatch =>{
@@ -44,11 +53,33 @@ export const loadMessages = (id) => {
   }
 }
 
+//фильтрация сообщений
+
 export const setFilterMessages = (text) =>{
   return dispatch =>{
     dispatch({
       type: 'filter/set',
       payload: text
     })
+  }
+}
+
+//удаление сообщений
+
+export const setDeleteMessage = (id) =>{
+  return dispatch => {
+    dispatch({
+      type: 'delete/message/start',
+      payload: id
+    })
+    fetch(`https://api.intocode.ru:8001/api/messages/5f2ea3801f986a01cefc8bcd/${id}`,{
+      method: 'DELETE'
+    })
+      .then(()=>{
+        dispatch({
+          type: 'DELETE',
+          payload: id
+        })
+      })
   }
 }

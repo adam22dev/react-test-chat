@@ -3,16 +3,14 @@ import styles from './messages.module.css';
 import { useSelector } from 'react-redux';
 import { application, contacts } from '../../redux/ducks';
 import FilterMessages from './FiltrMessages';
-
-function FiltrMessages() {
-  return null;
-}
+import { useParams } from 'react-router-dom';
 
 function Header(props) {
-  const profile = useSelector((state) => state.application.profile);
-  const profileId = useSelector((state) => state.application.profile._id);
-  const contacts = useSelector((state) => state.contacts.items);
-  const contactsId = useSelector((state) => state.contacts.items._id);
+  const params = useParams().id;
+  const contact = useSelector((state) => {
+    return state.contacts.items.find((contact) => contact._id === params);
+  });
+
   const loadingMessages = useSelector((state) => state.messages.loading);
 
   if (loadingMessages) {
@@ -32,7 +30,9 @@ function Header(props) {
           <FilterMessages />
         </div>
         <div className={styles.messageAuthorName}>
-          <div className={styles.messageAuthorNameTitle}>Deni Naurkhanov</div>
+          <div className={styles.messageAuthorNameTitle}>
+            {contact?.fullname}
+          </div>
           <div className={styles.messageAuthorNameOnline}>
             <span className="material-icons">circle</span>
           </div>
