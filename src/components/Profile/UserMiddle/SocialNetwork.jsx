@@ -3,8 +3,8 @@ import style from '../profile.module.css';
 function SocialNetwork(props) {
   return (
     <div className={style.socialnetwork}>
-      <ul>
-        <li>
+      <ul className={style.networksettings}>
+        <li className={style.mediaicons}>
           <div className={style.media}>
             <div>
               <span className="material-icons">facebook</span>
@@ -12,7 +12,7 @@ function SocialNetwork(props) {
             <div className={style.nameofsocial}>{props.prf.username}</div>
           </div>
         </li>
-        <li>
+        <li className={style.mediaicons}>
           <div className={style.media}>
             <div>
               <span className="material-icons">pages</span>
@@ -20,7 +20,7 @@ function SocialNetwork(props) {
             <div className={style.nameofsocial}>{props.prf.username}</div>
           </div>
         </li>
-        <li>
+        <li className={style.mediaicons}>
           <div className={style.media}>
             <div>
               <span className="material-icons">star</span>
