@@ -8,11 +8,11 @@ import { Route } from 'react-router-dom';
 function App(props) {
   return (
     <div className={styles.container}>
-      <Route path="/:id?">
-        <Chats />
+      <Chats />
+      <Route path="/contact/:id?">
         <Messages />
-        <Profile />
       </Route>
+      <Profile />
     </div>
   );
 }

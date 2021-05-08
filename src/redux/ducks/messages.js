@@ -17,17 +17,23 @@ export default function messages(state = initialState, action) {
         items: action.payload,
         loading: false
       }
+
+    case 'filter/set':
+      return {
+        ...state,
+        filter: action.payload
+      }
     default:
       return state;
   }
 }
 
-export const loadMessages = () => {
+export const loadMessages = (id) => {
   return dispatch =>{
     dispatch({
       type: 'message/load/start'
     })
-    fetch(`https://api.intocode.ru:8001/api/messages/5f2ea3801f986a01cefc8bcd/5f31422e9418570bc43fcbb4`)
+    fetch(`https://api.intocode.ru:8001/api/messages/5f2ea3801f986a01cefc8bcd/${id}`)
       .then(response=>response.json())
       .then(json=>{
         dispatch({
@@ -38,4 +44,11 @@ export const loadMessages = () => {
   }
 }
 
-
+export const setFilterMessages = (text) =>{
+  return dispatch =>{
+    dispatch({
+      type: 'filter/set',
+      payload: text
+    })
+  }
+}

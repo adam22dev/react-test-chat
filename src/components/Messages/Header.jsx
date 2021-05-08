@@ -2,6 +2,11 @@ import React from 'react';
 import styles from './messages.module.css';
 import { useSelector } from 'react-redux';
 import { application, contacts } from '../../redux/ducks';
+import FilterMessages from './FiltrMessages';
+
+function FiltrMessages() {
+  return null;
+}
 
 function Header(props) {
   const profile = useSelector((state) => state.application.profile);
@@ -24,7 +29,7 @@ function Header(props) {
       <div className={styles['header-center-block']}>
         <div className={styles.messageSearch}>
           <span className="material-icons">search</span>
-          <input type="text" />
+          <FilterMessages />
         </div>
         <div className={styles.messageAuthorName}>
           <div className={styles.messageAuthorNameTitle}>Deni Naurkhanov</div>

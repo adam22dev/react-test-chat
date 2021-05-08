@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './chats.module.css';
 import { NavLink } from 'react-router-dom';
 
-function Contact (props) {
+function Contact(props) {
   return (
     <div className={styles['contact-card']}>
       <li className={styles['contact-names']}>
