@@ -7,7 +7,7 @@ import Skeleton from './Skeleton';
 import Contact from './Contact';
 import { contacts } from '../../redux/ducks';
 
-function Chats (props) {
+function Chats(props) {
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts.items);
   const loading = useSelector((state) => state.contacts.loading);
