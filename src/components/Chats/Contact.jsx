@@ -6,17 +6,21 @@ function Contact(props) {
   const lastMessages = props.contact.lastMessage;
 
   return (
-    <div className={styles['contact-card']}>
-      <li className={styles['contact-names']}>
-        <NavLink to={`/contact/${props.contact._id}`}>
-          {props.contact.fullname}
-        </NavLink>
+    <li className={styles['contact-chat']}>
+      <div className={styles['contact-avatar']}>ava</div>
 
-        <div className={styles['contact-last-message']}>
-          {lastMessages === undefined ? '' : lastMessages.content.substr(0, 30)}
+      <NavLink to={`/contact/${props.contact._id}`}>
+        <div className={styles['contact-names']}>
+          <div className={styles['contact-name']}>{props.contact.fullname}</div>
+
+          <div className={styles['contact-last-message']}>
+            {lastMessages === undefined
+              ? ''
+              : lastMessages.content.substr(0, 30)}
+          </div>
         </div>
-      </li>
-    </div>
+      </NavLink>
+    </li>
   );
 }
 
