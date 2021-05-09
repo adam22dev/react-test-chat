@@ -3,6 +3,7 @@ const initialState = {
   loading: false,
   filter: '',
   messageText: '',
+  loadingMessage: false
 };
 
 export default function messages(state = initialState, action) {
@@ -19,6 +20,19 @@ export default function messages(state = initialState, action) {
         loading: false
       }
 
+    case  'message/send/start':
+      return {
+        ...state,
+        loadingMessage: true
+      }
+
+    case 'message/send/success':
+      return {
+        ...state,
+        items: action.payload,
+        loadingMessage: false
+      }
+
     case 'filter/set':
       return {
         ...state,
@@ -29,6 +43,12 @@ export default function messages(state = initialState, action) {
         ...state,
         items: state.items.filter(item=>item._id !== action.payload)
       }
+    case 'set/message/text':
+      return {
+        ...state,
+        messageText: action.payload
+      }
+
 
     default:
       return state;
@@ -50,19 +70,13 @@ export const loadMessages = (id) => {
           payload: json
         })
       })
+
+      .catch((error) => {
+        console.error(error);
+      });
   }
 }
 
-//фильтрация сообщений
-
-export const setFilterMessages = (text) =>{
-  return dispatch =>{
-    dispatch({
-      type: 'filter/set',
-      payload: text
-    })
-  }
-}
 
 //удаление сообщений
 
@@ -81,5 +95,63 @@ export const setDeleteMessage = (id) =>{
           payload: id
         })
       })
+  }
+}
+
+// получение текста сообщений
+
+export const setMessageText = (messageText) =>{
+  return dispatch =>{
+    dispatch({
+      type: 'set/message/text',
+      payload: messageText
+    })
+  }
+
+}
+
+
+//отправка сообщения
+
+export const sendMessage = (myId,contactId,messageText) =>{
+  return dispatch =>{
+    dispatch({
+      type: 'message/send/start'
+    })
+      fetch("https://api.intocode.ru:8001/api/messages",{
+        method: 'POST',
+        body: JSON.stringify({
+          myId: `${myId}`,
+          contactId: `${contactId}`,
+          type: "text",
+          content: `${messageText}`
+        }),
+        headers: {
+          'Content-type' : 'application/json',
+        },
+
+      })
+        .then(response=>response.json())
+        .then(json=>{
+          dispatch({
+            type: 'message/send/success',
+            payload: json
+          })
+        })
+        .catch((error)=>{
+          console.error(error)
+        })
+
+  }
+}
+
+//фильтрация сообщений
+
+export const setFilterMessages = (text) =>{
+  return dispatch =>{
+    dispatch({
+      type: 'filter/set',
+      payload: text
+    })
   }
 }
