@@ -103,4 +103,7 @@ height: 15%;
   justify-content: center;
   cursor: pointer;
 }
+.online{
+  color: red;
+}
 

@@ -1,11 +1,13 @@
 import style from '../profile.module.css';
 import Avatar from '../../App/Avatar';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 function UserInfo(props) {
+
   return (
       <div className={style.userinfo}>
         <div className={style.avatar}>
-          <Avatar size="large" margin={0}>
+          <Avatar size="large" margin={0} >
             1
           </Avatar>
         </div>
