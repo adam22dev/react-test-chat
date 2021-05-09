@@ -29,7 +29,7 @@ export default function messages(state = initialState, action) {
     case 'message/send/success':
       return {
         ...state,
-        items: action.payload,
+        items: [...state.items,action.payload],
         loadingMessage: false
       }
 

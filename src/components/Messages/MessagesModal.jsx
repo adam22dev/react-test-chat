@@ -18,6 +18,8 @@ function MessagesModal(props) {
     dispatch(loadMessages(contactsId))
   },[contactsId])
 
+
+
   const filteredMessages = messages
     .filter(messages=>messages.content.toUpperCase().indexOf(filter.toUpperCase())>-1)
 
