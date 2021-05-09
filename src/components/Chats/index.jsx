@@ -6,6 +6,7 @@ import Search from './Search';
 import Skeleton from './Skeleton';
 import Contact from './Contact';
 import { contacts } from '../../redux/ducks';
+import { NavLink } from 'react-router-dom';
 
 function Chats(props) {
   const dispatch = useDispatch();

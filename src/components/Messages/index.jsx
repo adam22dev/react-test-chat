@@ -3,17 +3,26 @@ import styles from './messages.module.css'
 import Header from './Header';
 import MessagesModal from './MessagesModal';
 import WriteMessage from './WriteMessage';
+import { Route, Switch } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import SelectChatPage from './SelectChatPage';
 
 function Messages(props) {
-  const id = useParams().id
+
 
 
   return (
     <div className={styles.messages}>
-      <Header />
-      <MessagesModal idContacts={id} />
-      <WriteMessage />
+      <Switch>
+        <Route path="/contact/:id?">
+        <Header />
+        <MessagesModal  />
+        <WriteMessage  />
+        </Route>
+        <Route>
+          <SelectChatPage />
+        </Route>
+      </Switch>
     </div>
   );
 }

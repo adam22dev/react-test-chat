@@ -5,7 +5,7 @@ import { setFilterMessages } from '../../redux/ducks/messages';
 function FilterMessages(props) {
   const filter = useSelector(state=>state.messages.filter)
   const dispatch = useDispatch()
-  const messages = useSelector(state=>state.messages.items)
+
 
   const handleFilterMessages = (event) => {
     dispatch(setFilterMessages(event.target.value))

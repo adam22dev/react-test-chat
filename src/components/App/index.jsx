@@ -9,9 +9,7 @@ function App(props) {
   return (
     <div className={styles.container}>
       <Chats />
-      <Route path="/contact/:id?">
-        <Messages />
-      </Route>
+      <Messages />
       <Profile />
     </div>
   );
