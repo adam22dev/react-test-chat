@@ -11,5 +11,45 @@ body {
     height: 100vh;
     display: flex;
 }
-
-
+.avatar{
+    background: linear-gradient(to top, #5a5cd8, #9198e5);
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    pointer-events: none;
+    user-select: none;
+}
+.small{
+    background: linear-gradient(to top, #5a5cd8, #9198e5);
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    pointer-events: none;
+    user-select: none;
+    width: 30px;
+    height: 30px;
+}
+.medium{
+    background: linear-gradient(to top, #5a5cd8, #9198e5);
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    pointer-events: none;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+}
+.large{
+    background: linear-gradient(to top, #5a5cd8, #9198e5);
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    pointer-events: none;
+    user-select: none;
+    width: 100px;
+    height: 100px;
+}
