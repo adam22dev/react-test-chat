@@ -15,16 +15,8 @@ function Avatar(props) {
         props.online ? styles.mediumonline : styles[props.size]
       }`}
       style={{ margin: props.margin, width: props.width, height: props.height }}
-
-
     >
-<<<<<<< HEAD
-      {props.children}
-      {/*{prf.fullname.substr[0]}*/}
       D
-=======
-      1
->>>>>>> eb70afca0f431c7a6391adb16ad2257a4327fb68
     </div>
   );
 }
