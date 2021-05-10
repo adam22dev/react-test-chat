@@ -2,6 +2,7 @@ const initialState = {
   filter: '',
   items: [],
   loading: false,
+  selectedContactId: null,
 };
 
 export default function contacts (state = initialState, action) {
@@ -25,7 +26,13 @@ export default function contacts (state = initialState, action) {
         filter: action.payload,
       };
 
-    default:
+    case 'contacts/select':
+      return {
+    ...state,
+     selectedContactId: action.payload,
+  };
+
+      default:
       return state;
   }
 }
@@ -52,4 +59,11 @@ export const setSearchContact = (text) => {
     type: 'filter/contacts',
     payload: text,
   };
+};
+
+export const selectContact = (contactId) => {
+  return {
+    type: 'contacts/select',
+    payload: contactId
+  }
 };

@@ -15,7 +15,7 @@
   width: 0;
 }
 
-.contacts-chats ul li {
+.contacts-chats ul li, .contact-active {
   width: 230px;
   background-color: #ecf1f5;
   align-items: center;
@@ -24,6 +24,10 @@
   padding: 0 8px;
   height: 70px;
   display: flex;
+}
+
+.contact-active {
+  background-color: white!important;
 }
 
 .contact-chat {
@@ -81,7 +85,7 @@ input:hover {
 }
 
 .contact-chat:hover,
-.contact-selected {
+.contact-active {
   background-color: white;
   border: 1px solid #dedede;
   border-radius: 5px;

@@ -11,6 +11,7 @@ function Chats(props) {
   const contacts = useSelector((state) => state.contacts.items);
   const loading = useSelector((state) => state.contacts.loading);
   const filter = useSelector((state) => state.contacts.filter);
+
   const filteredContacts = contacts.filter(
     (contact) =>
       contact.fullname.toUpperCase().indexOf(filter.toUpperCase()) > -1,
