@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './app.module.css';
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+
 function Avatar(props) {
-  const prf = useSelector(state => state.application.profile)
+  const prf = useSelector((state) => state.application.profile);
   return (
     <div
       className={`${styles.avatar} ${styles[props.size]}`}
