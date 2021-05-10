@@ -1,3 +1,5 @@
+import { messagesDownScroll } from '../../down';
+
 const initialState = {
   items: [],
   loading: false,
@@ -74,6 +76,8 @@ export const loadMessages = (id) => {
       .catch((error) => {
         console.error(error);
       });
+
+    messagesDownScroll()
   }
 }
 
@@ -141,6 +145,8 @@ export const sendMessage = (myId,contactId,messageText) =>{
         .catch((error)=>{
           console.error(error)
         })
+
+    messagesDownScroll()
 
   }
 }

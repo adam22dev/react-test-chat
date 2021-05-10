@@ -149,34 +149,65 @@
 }
 
 .messageDesignIn{
-    width: 25%;
+    width: 170px;
     display: flex;
-    padding: 10px 15px;
+    height: 30px;
+    line-height: 30px;
     background-color: rgba(196,196,196,0.8);
     box-shadow: 0 0 2px 1px  rgba(0,0,0,0.3);
     border-radius: 15px 15px 15px  0;
     color: white;
     font-size: 12px;
     margin: 0 auto 10px 0;
+    word-break: break-word;
 
+}
 
-
+.messageInText{
+    margin-left: 5px;
 }
 
 
 .messageDesignOut{
-    width: 25%;
+    width: 170px;
     display: flex;
     word-break: break-word;
-    padding: 10px 15px;
+    padding: 10px 10px;
     background-color: rgba(17,39,255,0.8);
     box-shadow: 0 0 2px 1px  rgba(0,0,0,0.3);
     border-radius: 15px 15px 0 15px;
     color: white;
     font-size: 12px;
     margin: 0 0 10px auto;
+    position: relative;
+}
+
+.messageOutText{
+
+}
+
+.messageTime{
+    position: absolute;
+    left: 75%;
+    bottom: 5%;
+    font-size: 8px;
+}
+
+.messageRead{
+    left: 90%;
+    bottom: 1%;
+    position: absolute;
+
+}
+
+.messageRead span{
+    font-size: 10px;
+
+}
 
 
+.messageText{
+    font-size: 0.8rem;
 }
 
 .headerLoading{
@@ -210,6 +241,7 @@
 .messageDesignIn .deleteButton,
 .messageDesignOut .deleteButton
 {
+    width: 20px ;
     display: none;
     cursor: pointer;
 }
@@ -218,4 +250,14 @@
 .messageDesignOut:hover .deleteButton
 {
     display: inline-block;
+}
+
+.generalBlockMessageIn{
+    display: flex;
+
+}
+
+.messageAvatar{
+    margin-top: 10px;
+    padding: 0 10px 0 0;
 }
