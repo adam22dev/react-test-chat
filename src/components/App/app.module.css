@@ -1,38 +1,35 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
-.container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
-.avatar{
-    background: linear-gradient(to top, #5a5cd8, #9198e5);
-    border-radius: 100%;
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    pointer-events: none;
-    user-select: none;
+.avatar {
+  background: linear-gradient(to top, #5a5cd8, #9198e5);
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  pointer-events: none;
+  user-select: none;
 }
 .small{
     background: linear-gradient(to top, #5a5cd8, #9198e5);
     border-radius: 100%;
     text-align: center;
-    margin: auto;
-    justify-content: center;
     color: white;
     font-weight: 900;
     pointer-events: none;
     user-select: none;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+    width: 30px;
+    height: 30px;
 }
 .medium{
     background: linear-gradient(to top, #5a5cd8, #9198e5);
@@ -42,9 +39,8 @@ body {
     font-weight: 900;
     pointer-events: none;
     user-select: none;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 50px;
+    height: 50px;
 }
 .large{
     background: linear-gradient(to top, #5a5cd8, #9198e5);
@@ -56,28 +52,4 @@ body {
     user-select: none;
     width: 100px;
     height: 100px;
-    line-height: 100px;
-}
-.mediumonline{
-    background: linear-gradient(to top, #5a5cd8, #9198e5);
-    border-radius: 100%;
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    pointer-events: none;
-    user-select: none;
-    width: 30px;
-    height: 30px;
-    position: relative;
-}
-.mediumonline::before{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 60%;
-    border-radius: 100em;
-    width: 7px;
-    height: 7px;
-    z-index: 1;
-    background: limegreen;
 }

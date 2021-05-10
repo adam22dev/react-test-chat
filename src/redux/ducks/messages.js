@@ -76,7 +76,6 @@ export const loadMessages = (id) => {
       .catch((error) => {
         console.error(error);
       });
-
     messagesDownScroll()
   }
 }
@@ -141,13 +140,12 @@ export const sendMessage = (myId,contactId,messageText) =>{
             type: 'message/send/success',
             payload: json
           })
+
         })
         .catch((error)=>{
           console.error(error)
         })
-
     messagesDownScroll()
-
   }
 }
 

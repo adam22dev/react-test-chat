@@ -11,7 +11,7 @@ function MessagesBlocks(props) {
   const dispatch = useDispatch();
   const messageId = props.message._id;
   const readMessage = props.message.read;
-  const timeSendMessage = props.message.time
+  const timeSendMessage = props.message.time;
 
   if (props.message.type === 'info') {
     return <MessageInfo content={props.message.content} />;
@@ -36,7 +36,9 @@ function MessagesBlocks(props) {
         <div>
           <div className={styles.messageDesignOut}>
             <div className={styles.messageOutText}>{props.message.content}</div>
-            <div className={styles.messageTime}>{timeSendMessage.substr(11,5)}</div>
+            <div className={styles.messageTime}>
+              {timeSendMessage.substr(11, 5)}
+            </div>
             <div className={styles.messageRead}>
               {readMessage === true ? (
                 <div>
@@ -47,6 +49,9 @@ function MessagesBlocks(props) {
                   <span className="material-icons">done_all</span>
                 </div>
               )}
+            </div>
+            <div className={styles.deleteButton} onClick={handleDeleteMessage}>
+              <span className="material-icons">clear</span>
             </div>
           </div>
         </div>
