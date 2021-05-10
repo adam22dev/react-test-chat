@@ -14,10 +14,9 @@ function Profile(props) {
   useEffect(() => {
     dispatch(loadProfile());
   }, []);
-  const users = useSelector((state) => state.contacts.items);
+  const users = useSelector((state) => state.application.profile);
   const load = useSelector(state => state.application.loading)
   const id = useParams().id;
-  const userFinded = users.find((user) => id === user._id);
   return (
     load ? "" :
         <div className={style.profile}>

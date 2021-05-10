@@ -16,7 +16,7 @@ function Avatar(props) {
 
 
     >
-      {props.children}
+      1
     </div>
   );
 }
@@ -27,7 +27,6 @@ Avatar.propTypes = {
   online: PropTypes.bool,
   width: PropTypes.string,
   height: PropTypes.string,
-  children: PropTypes.node
 };
 
 export default Avatar;
