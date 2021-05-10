@@ -83,6 +83,7 @@
 .messageScroll{
     overflow-y: scroll;
 
+
 }
 
 .messagesModal::-webkit-scrollbar{
@@ -249,6 +250,10 @@
     width: 20px ;
     display: none;
     cursor: pointer;
+    position: absolute;
+    left: 85%;
+    top: 10%;
+
 }
 
 .messageDesignIn:hover .deleteButton,
@@ -265,4 +270,8 @@
 .messageAvatar{
     margin-top: 10px;
     padding: 0 10px 0 0;
+}
+
+.deleteButton span  {
+    font-size: 15px;
 }

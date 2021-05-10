@@ -1,6 +1,11 @@
 
-export const messagesDownScroll = () =>{
+export const messagesDownScroll = () => {
   const message = document.getElementById('block_message');
-  message.scrollTop = message.scrollHeight;
+  let scrollDown = setTimeout(()=>{
+    message.scrollTop = message.scrollHeight
+  },1000)
+
+
+
 };
 

@@ -76,7 +76,9 @@ export const loadMessages = (id) => {
       .catch((error) => {
         console.error(error);
       });
+
     messagesDownScroll()
+
   }
 }
 
