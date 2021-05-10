@@ -14,15 +14,16 @@ function Profile(props) {
   useEffect(() => {
     dispatch(loadProfile());
   }, []);
-  const profile = useSelector((state) => state.application.profile);
+  const users = useSelector((state) => state.contacts.items);
   const load = useSelector(state => state.application.loading)
   const id = useParams().id;
-
+  const userFinded = users.find((user) => id === user._id);
   return (
+    load ? "" :
         <div className={style.profile}>
-          <UserInfo prf={profile} />
+          <UserInfo prf={users} />
           <ConnectionUser />
-          <SocialMedia prf={profile}/>
+          <SocialMedia prf={users}/>
           <Media />
         </div>
       )
