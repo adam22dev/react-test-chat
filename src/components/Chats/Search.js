@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './chats.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { contacts } from '../../redux/ducks';
 import { setSearchContact } from '../../redux/ducks/contacts';
 
 function Search(props) {

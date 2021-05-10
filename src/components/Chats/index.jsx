@@ -3,10 +3,8 @@ import styles from './chats.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadContacts } from '../../redux/ducks/contacts';
 import Search from './Search';
-import Skeleton from './Skeleton';
+import SkeletonComponent from './SkeletonComponent';
 import Contact from './Contact';
-import { contacts } from '../../redux/ducks';
-import { NavLink } from 'react-router-dom';
 
 function Chats(props) {
   const dispatch = useDispatch();
@@ -17,6 +15,9 @@ function Chats(props) {
     (contact) =>
       contact.fullname.toUpperCase().indexOf(filter.toUpperCase()) > -1,
   );
+  const skeleton = new Array(9)
+    .fill(1)
+    .map((item, index) => <SkeletonComponent key={index} />);
 
   useEffect(() => {
     dispatch(loadContacts());
@@ -30,13 +31,11 @@ function Chats(props) {
 
       <div className={styles['contacts-chats']}>
         <ul>
-          {loading ? (
-            <Skeleton />
-          ) : (
-            filteredContacts.map((contact) => {
-              return <Contact key={contact._id} contact={contact} />;
-            })
-          )}
+          {loading
+            ? skeleton
+            : filteredContacts.map((contact) => {
+                return <Contact key={contact._id} contact={contact} />;
+              })}
         </ul>
       </div>
     </div>
