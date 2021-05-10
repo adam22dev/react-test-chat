@@ -13,8 +13,6 @@ function MessagesBlocks(props) {
   const readMessage = props.message.read;
   const timeSendMessage = props.message.time
 
-  console.log(timeSendMessage)
-
   if (props.message.type === 'info') {
     return <MessageInfo content={props.message.content} />;
   }

@@ -24,7 +24,7 @@ function MessagesModal(props) {
     .filter(messages=>messages.content.toUpperCase().indexOf(filter.toUpperCase())>-1)
 
   return (
-    <div className={styles.messagesModal}>
+    <div className={styles.messagesModal} id="block_message">
       {filteredMessages.map((item)=>{
         return <MessagesBlocks message={item} contactsId={props.idContacts} key={item._id} />
       })}
