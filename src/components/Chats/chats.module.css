@@ -24,6 +24,11 @@
   padding: 0 8px;
   height: 70px;
   display: flex;
+
+}
+
+.contacts-chats {
+  margin: auto;
 }
 
 .contact-active {
@@ -84,8 +89,7 @@ input:hover {
   list-style: none;
 }
 
-.contact-chat:hover,
-.contact-active {
+.contact-active, .contact-chat:hover  {
   background-color: white;
   border: 1px solid #dedede;
   border-radius: 5px;
