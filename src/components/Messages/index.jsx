@@ -15,7 +15,7 @@ function Messages(props) {
     <div className={styles.messages}>
       <Switch>
         <Route path="/contact/:id?">
-        <Header />
+        <Header  setShowProfile={props.setShowProfile} showProfile={props.showProfile}/>
         <MessagesModal  />
         <WriteMessage  />
         </Route>

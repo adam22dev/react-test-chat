@@ -38,7 +38,7 @@ function Header(props) {
           </div>
         </div>
         <div className={styles.messageSettings}>
-          <span className="material-icons">settings</span>
+          <span className="material-icons" onClick={()=>props.setShowProfile(!props.showProfile)}>settings</span>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 .messages{
-    width: 60%;
+    flex: 1;
     height: 100vh;
 
 }
@@ -225,17 +225,41 @@
     justify-content: center;
 }
 
+
 .headerLoading div{
     margin-left: 5px;
+
+}
+
+.headerLoading span{
+    animation-name: rotatePreloader;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .messageSearch  span{
     padding: 0;
+    width: 20px;
     cursor: pointer;
+
+
 }
 
 .messageSettings{
     cursor: pointer;
+}
+
+@keyframes rotatePreloader {
+    0%{
+        transform:rotate(0deg);
+    }
+
+
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .сhooseChat{

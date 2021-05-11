@@ -1,4 +1,3 @@
-
 import React from 'react';
 import styles from './chats.module.css';
 import { NavLink } from 'react-router-dom';
@@ -7,22 +6,26 @@ import * as dayjs from 'dayjs';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContact } from '../../redux/ducks/contacts';
 
-function Contact (props) {
+function Contact(props) {
   const lastMessages = props.contact.lastMessage;
-  const selected = useSelector(state => state.contacts.selectedContactId);
-const dispatch = useDispatch();
+  const selected = useSelector((state) => state.contacts.selectedContactId);
+  const dispatch = useDispatch();
 
- const handleSelectContact = () => {
-   dispatch(selectContact(props.contact._id))
- };
+  const handleSelectContact = () => {
+    dispatch(selectContact(props.contact._id));
+  };
 
   return (
-    <li onClick={handleSelectContact} className={selected === props.contact._id
-      ? `${styles['contact-active']} ${styles['contact-chat']}`
-      : ''
-}>
+    <li
+      onClick={handleSelectContact}
+      className={
+        selected === props.contact._id
+          ? `${styles['contact-active']} ${styles['contact-chat']}`
+          : ''
+      }
+    >
       <div className={styles['contact-avatar']}>
-        <Avatar size='small' />
+        <Avatar size="small" />
       </div>
       <NavLink to={`/contact/${props.contact._id}`}>
         <div className={styles['contact-names']}>

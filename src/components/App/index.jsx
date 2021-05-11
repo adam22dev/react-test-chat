@@ -7,15 +7,22 @@ import { Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
 function App(props) {
-  const [profile,setProfile] =useState(false)
+  const [showProfile,setShowProfile] = useState(false)
+
+  console.log(showProfile)
 
   return (
     <div className={styles.container}>
       <Chats />
-      <Messages />
-      <CSSTransition>
-      <Profile />
-      </CSSTransition>
+       <Messages setShowProfile={setShowProfile} showProfile={showProfile}/>
+       <CSSTransition
+         in={showProfile}
+         unmountOnExit
+         timeout={1000}
+         classNmae="profile"
+       >
+         <Profile />
+       </CSSTransition>
     </div>
   );
 }

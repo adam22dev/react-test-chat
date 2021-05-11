@@ -8,8 +8,9 @@ function Avatar(props) {
   const users = useSelector((state) => state.contacts.item);
   const load = useSelector((state) => state.application.loading);
 
-  return (
-    load ? "" :
+  return load ? (
+    ''
+  ) : (
     <div
       className={`${styles.avatar}  ${
         props.online ? styles.mediumonline : styles[props.size]

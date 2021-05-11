@@ -8,25 +8,26 @@ import { loadProfile } from '../../redux/ducks/application';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-
 function Profile(props) {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(loadProfile());
   }, []);
-  const users = useSelector((state) => state.application.profile);
-  const load = useSelector(state => state.application.loading)
-  const id = useParams().id;
-  return (
-    load ? "" :
-        <div className={style.profile}>
-          <UserInfo prf={users} />
-          <ConnectionUser />
-          <SocialMedia prf={users}/>
-          <Media />
-        </div>
-      )
-    }
 
+  const users = useSelector((state) => state.application.profile);
+  const load = useSelector((state) => state.application.loading);
+  const id = useParams().id;
+  return load ? (
+    ''
+  ) : (
+    <div className={style.profile}>
+      <UserInfo prf={users} />
+      <ConnectionUser />
+      <SocialMedia prf={users} />
+      <Media />
+    </div>
+  );
+}
 
 export default Profile;

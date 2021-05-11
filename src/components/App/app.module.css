@@ -7,10 +7,23 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .container {
-  width: 100%;
   height: 100vh;
   display: flex;
+  background-color: #eeeeee;
 }
+
+
+
+
+.wrap_message_profile {
+  flex: 1;
+  display: flex;
+}
+
+.profile-enter{
+  width: 0;
+}
+
 .avatar {
   background: linear-gradient(to top, #5a5cd8, #9198e5);
   border-radius: 100%;
@@ -20,39 +33,39 @@ body {
   pointer-events: none;
   user-select: none;
 }
-.small{
-    background: linear-gradient(to top, #5a5cd8, #9198e5);
-    border-radius: 100%;
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    pointer-events: none;
-    user-select: none;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+.small {
+  background: linear-gradient(to top, #5a5cd8, #9198e5);
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  pointer-events: none;
+  user-select: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
 }
-.medium{
-    background: linear-gradient(to top, #5a5cd8, #9198e5);
-    border-radius: 100%;
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    pointer-events: none;
-    user-select: none;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+.medium {
+  background: linear-gradient(to top, #5a5cd8, #9198e5);
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  pointer-events: none;
+  user-select: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 }
-.large{
-    background: linear-gradient(to top, #5a5cd8, #9198e5);
-    border-radius: 100%;
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    pointer-events: none;
-    user-select: none;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
+.large {
+  background: linear-gradient(to top, #5a5cd8, #9198e5);
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  pointer-events: none;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
 }
