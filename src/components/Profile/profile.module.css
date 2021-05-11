@@ -38,32 +38,32 @@
 .networksettings {
   list-style: none;
   font-size: 16px;
-  padding: 0% 23%;
 }
 .mediaicons {
-  padding: 10% 0%;
-  width: 100px;
-  height: 50px;
 
 
 }
 .socialnetwork {
   background-color: white;
-  width: 200px;
+  width: 190px;
   margin: auto;
-  border-radius: 3%;
+  border-radius: 2%;
   box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
+  padding: 10px 10px 10px 50px;
+  margin-top: 20px;
 }
 .socialmedia {
   margin-top: 30%;
+  padding-bottom: 20px;
 }
 span {
   padding-left: 10%;
 }
 .heading {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-left: 20%;
+
 }
 .profile {
   width: 20%;
@@ -75,7 +75,7 @@ span {
 .fullname{
   text-align: center;
   padding-top: 7%;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.3em;
 }
 .media{
@@ -84,26 +84,32 @@ span {
   cursor: pointer;
 }
 .nameofsocial{
-  padding: 0% 15%;
+  padding-left: 10px;
   font-size: .9em;
 }
 .folders{
   background-color: white;
 height: 15%;
-  width: 200px;
+  width: 190px;
   margin: auto;
   border-radius: 2%;
   box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
-  padding: 10px 0px;
   margin-top: 20px;
+  list-style: none;
+  font-size: 16px;
+  padding: 10px 10px 10px 50px;
 }
 .medialow{
   display: flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
 .online{
   color: red;
+}
+.follow{
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(to bottom, #a3c8ff, #8cbafb, #73adf7, #579ff2, #2f92ee);
 }
 
