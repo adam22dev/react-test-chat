@@ -11,7 +11,7 @@ function Contact (props) {
   return (
     <li className={styles['contact-chat']}>
       <div className={styles['contact-avatar']}>
-        <Avatar size='medium' />
+        <Avatar size='small' />
       </div>
       <NavLink to={`/contact/${props.contact._id}`}>
         <div className={styles['contact-names']}>
