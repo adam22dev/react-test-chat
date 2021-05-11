@@ -4,7 +4,7 @@ function Folder() {
     <div className={style.folders}>
           <div className={style.medialow}>
             <div className={style.folder}>
-              <span className="material-icons">folder</span>
+              <div className={style.follow}></div>
             </div>
             <div className={style.nameofsocial}>
               <span>folder</span>
