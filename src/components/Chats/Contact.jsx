@@ -16,22 +16,17 @@ function Contact(props) {
   };
 
   return (
-    <li
-      onClick={handleSelectContact}
-      className={
-        selected === props.contact._id
-          ? `${styles['contact-active']} ${styles['contact-chat']}`
-          : ''
-      }
-    >
+    <li onClick={handleSelectContact} className={selected === props.contact._id
+      ? `${styles['contact-active']} ${styles['contact-chat']}`
+      : ''
+}>
       <div className={styles['contact-avatar']}>
-        <Avatar size="small" />
+        <Avatar size='small' />
       </div>
       <NavLink to={`/contact/${props.contact._id}`}>
         <div className={styles['contact-names']}>
           <div className={styles['contact-name']}>{props.contact.fullname}</div>
-
-          <div className={styles['contact-last-message']}>
+         <div className={styles['contact-last-message']}>
             {lastMessages === undefined
               ? ''
               : lastMessages.content.substr(0, 20) + '...'}
