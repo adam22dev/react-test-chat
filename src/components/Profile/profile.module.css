@@ -1,27 +1,11 @@
 .profile {
-  width: 30%;
+  width: 20%;
   height: 100vh;
   overflow: hidden;
   background-color: #ecf1f5;
 
 }
 
-.enter{
-  width: 0;
-}
-
-.enter-active{
-  width: 30%;
-}
-
-
-.exit{
-  width: 0;
-}
-
-.exit-active{
-  width: 30%;
-}
 
 
 .userinfo {
@@ -86,10 +70,7 @@ span {
   margin-left: 20%;
 
 }
-.profile {
-  width: 20%;
-  height: 100vh;
-}
+
 .color{
   color: red;
 }

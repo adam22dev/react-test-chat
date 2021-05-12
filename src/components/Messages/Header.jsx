@@ -7,9 +7,12 @@ import { useParams } from 'react-router-dom';
 
 function Header(props) {
   const params = useParams().id;
-  const contact = useSelector((state) => {
-    return state.contacts.items.find((contact) => contact._id === params);
-  });
+  const contacts =useSelector(state=>state.contacts.items)
+  const contact = contacts.find((contact)=>contact._id === params)
+
+
+
+
 
   const loadingMessages = useSelector((state) => state.messages.loading);
 
@@ -34,11 +37,16 @@ function Header(props) {
             {contact?.fullname}
           </div>
           <div className={styles.messageAuthorNameOnline}>
-            <span className="material-icons">circle</span>
+            {contact?.online === true ? (<span className="material-icons">circle</span>) : ('')}
           </div>
         </div>
         <div className={styles.messageSettings}>
-          <span className="material-icons" onClick={()=>props.setShowProfile(!props.showProfile)}>settings</span>
+          <span
+            className="material-icons"
+            onClick={() => props.setShowProfile(!props.showProfile)}
+          >
+            settings
+          </span>
         </div>
       </div>
     </div>

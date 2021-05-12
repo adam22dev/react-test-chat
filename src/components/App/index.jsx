@@ -12,18 +12,20 @@ function App(props) {
   console.log(showProfile)
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <Chats />
        <Messages setShowProfile={setShowProfile} showProfile={showProfile}/>
        <CSSTransition
          in={showProfile}
          unmountOnExit
-         timeout={1000}
-         classNmae="profile"
+         timeout={500}
+         className="profile"
        >
          <Profile />
        </CSSTransition>
     </div>
+
+
   );
 }
 
