@@ -5,7 +5,7 @@
 .chats {
   width: 20%;
   height: 100vh;
-  background-color: #ecf1f5;
+  background-color: #d9e5ef;
   position: relative;
   overflow-y: scroll;
   margin: auto;
@@ -15,16 +15,16 @@
   width: 0;
 }
 
-.contacts-chats ul li, .contact-active {
+.contacts-chats ul li,
+.contact-active {
   width: 230px;
-  background-color: #ecf1f5;
+  background-color: #d9e5ef;
   align-items: center;
   margin: 5px 0;
   list-style-type: none;
   padding: 0 8px;
   height: 70px;
   display: flex;
-
 }
 
 .contacts-chats {
@@ -32,7 +32,7 @@
 }
 
 .contact-active {
-  background-color: white!important;
+  background-color: white !important;
 }
 
 .contact-chat {
@@ -72,7 +72,7 @@ input:hover {
   text-decoration: none;
   color: black;
   width: 100%;
-  padding: 20px 8px;
+  padding: 20px 3px;
 }
 
 .contacts-chats {
@@ -84,12 +84,13 @@ input:hover {
 
 .contacts-chats ul {
   padding: 0;
-  margin: 0;
+  margin: auto;
   box-shadow: none;
   list-style: none;
 }
 
-.contact-active, .contact-chat:hover  {
+.contact-active,
+.contact-chat:hover {
   background-color: white;
   border: 1px solid #dedede;
   border-radius: 5px;
@@ -138,7 +139,7 @@ span {
 .contact-names,
 .contact-skeleton {
   width: 135px;
-  margin-right: 5px;
+  margin-right: 3px;
   padding-left: 5px;
 }
 
