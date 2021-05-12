@@ -22,7 +22,7 @@ function Chats(props) {
 
   useEffect(() => {
     dispatch(loadContacts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={styles.chats}>

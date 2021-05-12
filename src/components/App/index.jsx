@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chats from '../Chats';
 import Messages from '../Messages';
 import styles from './app.module.css';
 import Profile from '../Profile';
-import { Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import { loadProfile } from '../../redux/ducks/application';
+import { useDispatch } from 'react-redux';
+
 
 function App(props) {
   const [showProfile,setShowProfile] = useState(false)
+  const dispatch = useDispatch()
 
-  console.log(showProfile)
+  useEffect(() => {
+    dispatch(loadProfile());
+  }, [dispatch]);
+
 
   return (
     <div className={styles.container} >
@@ -19,13 +25,10 @@ function App(props) {
          in={showProfile}
          unmountOnExit
          timeout={500}
-         className="profile"
        >
          <Profile />
        </CSSTransition>
     </div>
-
-
   );
 }
 

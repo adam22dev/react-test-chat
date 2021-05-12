@@ -1,5 +1,5 @@
 import style from '../profile.module.css';
-import Avatar from '../../App/Avatar';
+
 function ConnectionUser() {
   return (
     <div className={style.iconuser}>

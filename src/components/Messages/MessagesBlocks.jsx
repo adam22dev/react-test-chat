@@ -26,7 +26,7 @@ function MessagesBlocks(props) {
       {toUserId === profileId ? (
         <div className={styles.generalBlockMessageIn}>
           <div className={styles.messageAvatar}>
-            <Avatar size={'small'} />
+           <Avatar size={'small'} />
           </div>
           <div className={styles.messageDesignIn}>
             <div className={styles.messageInText}>{props.message.content}</div>

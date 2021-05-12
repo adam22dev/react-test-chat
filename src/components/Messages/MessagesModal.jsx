@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import styles from './messages.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadMessages } from '../../redux/ducks/messages';
-import { messages } from '../../redux/ducks';
 import MessagesBlocks from './MessagesBlocks';
 import { useParams } from 'react-router-dom';
 
@@ -16,7 +15,7 @@ function MessagesModal(props) {
 
   useEffect(()=>{
     dispatch(loadMessages(contactsId))
-  },[contactsId])
+  },[contactsId,dispatch])
 
 
 

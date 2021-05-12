@@ -4,7 +4,6 @@ import Header from './Header';
 import MessagesModal from './MessagesModal';
 import WriteMessage from './WriteMessage';
 import { Route, Switch } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 import SelectChatPage from './SelectChatPage';
 
 function Messages(props) {
