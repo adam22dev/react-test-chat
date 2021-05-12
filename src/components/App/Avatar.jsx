@@ -3,9 +3,7 @@ import styles from './app.module.css';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-import { logger } from 'redux-logger/src';
 function Avatar(props) {
-  const users = useSelector((state) => state.contacts.item);
   const load = useSelector((state) => state.application.loading);
 
   return load ? (
