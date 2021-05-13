@@ -6,11 +6,15 @@ import Profile from '../Profile';
 import { CSSTransition } from 'react-transition-group';
 import { loadProfile } from '../../redux/ducks/application';
 import { useDispatch } from 'react-redux';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 
 function App(props) {
   const [showProfile,setShowProfile] = useState(false)
   const dispatch = useDispatch()
+
+
+  useHotkeys('ctrl+p',()=>setShowProfile(showProfile=>!showProfile))
 
   useEffect(() => {
     dispatch(loadProfile());

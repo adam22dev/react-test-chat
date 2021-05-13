@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './app.module.css';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 
 function Avatar(props) {
