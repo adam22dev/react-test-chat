@@ -5,7 +5,7 @@ import { loadMessages } from '../../redux/ducks/messages';
 import MessagesBlocks from './MessagesBlocks';
 import { useParams } from 'react-router-dom';
 
-function MessagesModal(props) {
+function Messages(props) {
   const dispatch = useDispatch()
   const messages = useSelector(state=>state.messages.items)
   const contactsId = useParams().id
@@ -33,4 +33,4 @@ function MessagesModal(props) {
   );
 }
 
-export default MessagesModal;
+export default Messages;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Chats from '../Chats';
-import Messages from '../Messages';
+import Messages from '../Chat';
 import styles from './app.module.css';
 import Profile from '../Profile';
 import { CSSTransition } from 'react-transition-group';
