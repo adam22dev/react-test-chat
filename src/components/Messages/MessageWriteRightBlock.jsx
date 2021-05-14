@@ -14,8 +14,6 @@ function MessageWriteRightBlock(props) {
     dispatch(sendMessage(myId, contactId, messageText));
   };
 
-
-
   return (
     <div className={styles.messageWriteRightBlock}>
       <div className={styles.clip}>

@@ -12,6 +12,8 @@ function MessagesBlocks(props) {
   const messageId = props.message._id;
   const readMessage = props.message.read;
   const timeSendMessage = props.message.time;
+  const contacts = useSelector((state) => state.contacts.items);
+  const contact = contacts.find((contact) => contact._id === props.contactsId);
 
   if (props.message.type === 'info') {
     return <MessageInfo content={props.message.content} />;
@@ -26,7 +28,7 @@ function MessagesBlocks(props) {
       {toUserId === profileId ? (
         <div className={styles.generalBlockMessageIn}>
           <div className={styles.messageAvatar}>
-           <Avatar size={'small'} />
+            <Avatar size={'small'} contact={contact} online={false} />
           </div>
           <div className={styles.messageDesignIn}>
             <div className={styles.messageInText}>{props.message.content}</div>

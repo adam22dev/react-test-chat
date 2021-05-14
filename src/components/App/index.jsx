@@ -8,30 +8,23 @@ import { loadProfile } from '../../redux/ducks/application';
 import { useDispatch } from 'react-redux';
 import { useHotkeys } from 'react-hotkeys-hook';
 
+function App() {
+  const [showProfile, setShowProfile] = useState(false);
+  const dispatch = useDispatch();
 
-function App(props) {
-  const [showProfile,setShowProfile] = useState(false)
-  const dispatch = useDispatch()
-
-
-  useHotkeys('ctrl+p',()=>setShowProfile(showProfile=>!showProfile))
+  useHotkeys('ctrl+p', () => setShowProfile((showProfile) => !showProfile));
 
   useEffect(() => {
     dispatch(loadProfile());
   }, [dispatch]);
 
-
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <Chats />
-       <Messages setShowProfile={setShowProfile} showProfile={showProfile}/>
-       <CSSTransition
-         in={showProfile}
-         unmountOnExit
-         timeout={500}
-       >
-         <Profile />
-       </CSSTransition>
+      <Messages setShowProfile={setShowProfile} showProfile={showProfile} />
+      <CSSTransition in={showProfile} unmountOnExit timeout={500}>
+        <Profile />
+      </CSSTransition>
     </div>
   );
 }

@@ -11,7 +11,6 @@ function Header(props) {
 
   const loadingMessages = useSelector((state) => state.messages.loading);
 
-
   if (loadingMessages) {
     return (
       <div className={styles.headerLoading}>

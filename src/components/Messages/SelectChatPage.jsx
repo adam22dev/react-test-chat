@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './messages.module.css'
+import styles from './messages.module.css';
 
 function SelectChatPage(props) {
   return (
