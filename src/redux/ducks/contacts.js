@@ -5,7 +5,7 @@ const initialState = {
   selectedContactId: null,
 };
 
-export default function contacts (state = initialState, action) {
+export default function contacts(state = initialState, action) {
   switch (action.type) {
     case 'contacts/load/start':
       return {
@@ -28,11 +28,11 @@ export default function contacts (state = initialState, action) {
 
     case 'contacts/select':
       return {
-    ...state,
-     selectedContactId: action.payload,
-  };
+        ...state,
+        selectedContactId: action.payload,
+      };
 
-      default:
+    default:
       return state;
   }
 }
@@ -64,6 +64,6 @@ export const setSearchContact = (text) => {
 export const selectContact = (contactId) => {
   return {
     type: 'contacts/select',
-    payload: contactId
-  }
+    payload: contactId,
+  };
 };

@@ -11,21 +11,25 @@ function FilterMessages() {
     dispatch(setFilterMessages(event.target.value));
   };
   const handleSearchForm = () => {
-    dispatch(setSearchForm())
+    dispatch(setSearchForm());
   };
   const handleMessageSearchClear = () => {
-    dispatch(setFilterMessages(''))
+    dispatch(setFilterMessages(''));
   };
 
   return (
     <div className={styles.messageSearch}>
-      <span className="material-icons" onClick={handleSearchForm}>search</span>
+      <span className="material-icons" onClick={handleSearchForm}>
+        search
+      </span>
       {searchForm ? (
-          <input type="text" value={filter} onChange={handleFilterMessages} />
-           ) : ''}
+        <input type="text" value={filter} onChange={handleFilterMessages} />
+      ) : ('')}
       {filter.length !== 0 && (
-        <span className="material-icons" onClick={handleMessageSearchClear}>clear</span>
-             )}
+        <span className="material-icons" onClick={handleMessageSearchClear}>
+          clear
+        </span>
+      )}
     </div>
   );
 }

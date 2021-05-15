@@ -11,7 +11,6 @@ function Header(props) {
 
   const loadingMessages = useSelector((state) => state.messages.loading);
 
-
   if (loadingMessages) {
     return (
       <div className={styles.headerLoading}>
@@ -24,7 +23,7 @@ function Header(props) {
   return (
     <div className={styles.header}>
       <div className={styles['header-center-block']}>
-          <FilterMessages />
+        <FilterMessages />
         <div className={styles.messageAuthorName}>
           <div className={styles.messageAuthorNameTitle}>
             {contact?.fullname}

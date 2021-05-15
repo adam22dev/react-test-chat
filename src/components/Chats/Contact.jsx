@@ -25,7 +25,11 @@ function Contact(props) {
       }
     >
       <div className={styles['contact-avatar']}>
-        <Avatar size="medium" online={props.contact.online} contacts={props.contact}/>
+        <Avatar
+          size="medium"
+          online={props.contact.online}
+          contacts={props.contact}
+        />
       </div>
       <NavLink to={`/contact/${props.contact._id}`}>
         <div className={styles['contact-names']}>
