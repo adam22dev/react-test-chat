@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './app.module.css';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { useHotkeys } from 'react-hotkeys-hook';
 
-import { logger } from 'redux-logger/src';
 function Avatar(props) {
-  const users = useSelector((state) => state.contacts.item);
   const load = useSelector((state) => state.application.loading);
+  const contacts = props.contacts;
 
   return load ? (
     ''
@@ -17,7 +17,7 @@ function Avatar(props) {
       }`}
       style={{ margin: props.margin, width: props.width, height: props.height }}
     >
-      D
+      {contacts !== undefined ? contacts.fullname.substr(0, 1) : null}
     </div>
   );
 }

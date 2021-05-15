@@ -22,7 +22,7 @@ function Chats() {
 
   useEffect(() => {
     dispatch(loadContacts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={styles.sidebar}>

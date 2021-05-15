@@ -1,28 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chats from '../Chats';
-import Messages from '../Messages';
+import Messages from '../Chat';
 import styles from './app.module.css';
 import Profile from '../Profile';
-import { Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import { loadProfile } from '../../redux/ducks/application';
+import { useDispatch } from 'react-redux';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 function App(props) {
-  const [showProfile,setShowProfile] = useState(false)
+  const [showProfile, setShowProfile] = useState(false);
+  const dispatch = useDispatch();
 
-  console.log(showProfile)
+  useHotkeys('ctrl+p', () => setShowProfile((showProfile) => !showProfile));
+
+  useEffect(() => {
+    dispatch(loadProfile());
+  }, [dispatch]);
 
   return (
     <div className={styles.container}>
       <Chats />
-       <Messages setShowProfile={setShowProfile} showProfile={showProfile}/>
-       <CSSTransition
-         in={showProfile}
-         unmountOnExit
-         timeout={1000}
-         classNmae="profile"
-       >
-         <Profile />
-       </CSSTransition>
+      <Messages setShowProfile={setShowProfile} showProfile={showProfile} />
+      <CSSTransition in={showProfile} unmountOnExit timeout={500}>
+        <Profile />
+      </CSSTransition>
     </div>
   );
 }
