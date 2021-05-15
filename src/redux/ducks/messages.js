@@ -5,7 +5,8 @@ const initialState = {
   loading: false,
   filter: '',
   messageText: '',
-  loadingMessage: false
+  loadingMessage: false,
+  searchForm: false
 };
 
 export default function messages(state = initialState, action) {
@@ -15,6 +16,7 @@ export default function messages(state = initialState, action) {
         ...state,
         loading:true
       }
+
     case 'message/load/success':
       return {
         ...state,
@@ -40,11 +42,19 @@ export default function messages(state = initialState, action) {
         ...state,
         filter: action.payload
       }
+
+    case 'searchForm/set':
+      return {
+        ...state,
+        searchForm: !state.searchForm
+      }
+
     case 'DELETE':
       return {
         ...state,
-        items: state.items.filter(item=>item._id !== action.payload)
+        items: state.items.filter(item => item._id !== action.payload)
       }
+
     case 'set/message/text':
       return {
         ...state,
@@ -60,7 +70,7 @@ export default function messages(state = initialState, action) {
 //подгрузка комментариев
 
 export const loadMessages = (id) => {
-  return dispatch =>{
+  return dispatch => {
     dispatch({
       type: 'message/load/start'
     })
@@ -85,7 +95,7 @@ export const loadMessages = (id) => {
 
 //удаление сообщений
 
-export const setDeleteMessage = (id) =>{
+export const setDeleteMessage = (id) => {
   return dispatch => {
     dispatch({
       type: 'delete/message/start',
@@ -94,7 +104,7 @@ export const setDeleteMessage = (id) =>{
     fetch(`https://api.intocode.ru:8001/api/messages/5f2ea3801f986a01cefc8bcd/${id}`,{
       method: 'DELETE'
     })
-      .then(()=>{
+      .then(() => {
         dispatch({
           type: 'DELETE',
           payload: id
@@ -105,14 +115,13 @@ export const setDeleteMessage = (id) =>{
 
 // получение текста сообщений
 
-export const setMessageText = (messageText) =>{
-  return dispatch =>{
+export const setMessageText = (messageText) => {
+  return dispatch => {
     dispatch({
       type: 'set/message/text',
       payload: messageText
     })
   }
-
 }
 
 
@@ -153,11 +162,17 @@ export const sendMessage = (myId,contactId,messageText) =>{
 
 //фильтрация сообщений
 
-export const setFilterMessages = (text) =>{
-  return dispatch =>{
+export const setFilterMessages = (text) => {
+  return dispatch => {
     dispatch({
       type: 'filter/set',
       payload: text
     })
   }
+}
+
+export const setSearchForm = () => {
+  return {
+    type: 'searchForm/set'
+      }
 }

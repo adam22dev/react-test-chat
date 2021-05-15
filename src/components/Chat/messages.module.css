@@ -29,14 +29,11 @@
 .header-center-block span{
     font-size: 20px;
     color: grey;
-
 }
 
 .messageSearch{
     display: flex;
     border-radius: 5px;
-
-
 }
 
 .messageSearch:hover{
@@ -48,7 +45,6 @@
     border: none;
     outline: none;
     border-radius: 5px;
-
 }
 
 
