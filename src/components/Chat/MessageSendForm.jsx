@@ -6,9 +6,6 @@ import { setMessageText } from '../../redux/ducks/messages';
 function MessageSendForm(props) {
   const messageText = useSelector((state) => state.messages.messageText);
   const dispatch = useDispatch();
-
-  console.log(messageText);
-
   const handleChange = (event) => {
     dispatch(setMessageText(event.target.value));
   };

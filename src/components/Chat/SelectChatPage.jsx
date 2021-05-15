@@ -3,8 +3,10 @@ import styles from './messages.module.css';
 
 function SelectChatPage(props) {
   return (
-    <div className={styles.chatNan}>
-      Please, select a chat to start messaging
+    <div className={styles.noSelectedChat}>
+      <div className={styles.chatNan}>
+        Please, select a chat to start messaging
+      </div>
     </div>
   );
 }

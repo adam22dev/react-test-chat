@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './messages.module.css';
 import Header from './Header';
-import MessagesModal from './MessagesModal';
+import Messages from './Messages';
 import WriteMessage from './WriteMessage';
 import { Route, Switch } from 'react-router-dom';
 import SelectChatPage from './SelectChatPage';
 
-function Messages(props) {
+function Chat(props) {
   return (
     <div className={styles.messages}>
       <Switch>
@@ -15,7 +15,7 @@ function Messages(props) {
             setShowProfile={props.setShowProfile}
             showProfile={props.showProfile}
           />
-          <MessagesModal />
+          <Messages />
           <WriteMessage />
         </Route>
         <Route>
@@ -26,4 +26,4 @@ function Messages(props) {
   );
 }
 
-export default Messages;
+export default Chat;

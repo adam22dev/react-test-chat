@@ -6,6 +6,10 @@ const initialState = {
   filter: '',
   messageText: '',
   loadingMessage: false,
+<<<<<<< HEAD
+=======
+  searchForm: false,
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
 };
 
 export default function messages(state = initialState, action) {
@@ -15,6 +19,10 @@ export default function messages(state = initialState, action) {
         ...state,
         loading: true,
       };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
     case 'message/load/success':
       return {
         ...state,
@@ -26,6 +34,10 @@ export default function messages(state = initialState, action) {
       return {
         ...state,
         loadingMessage: true,
+<<<<<<< HEAD
+=======
+        messageText: '',
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
       };
 
     case 'message/send/success':
@@ -40,11 +52,25 @@ export default function messages(state = initialState, action) {
         ...state,
         filter: action.payload,
       };
+<<<<<<< HEAD
+=======
+
+    case 'searchForm/set':
+      return {
+        ...state,
+        searchForm: !state.searchForm,
+      };
+
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
     case 'DELETE':
       return {
         ...state,
         items: state.items.filter((item) => item._id !== action.payload),
       };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
     case 'set/message/text':
       return {
         ...state,
@@ -57,7 +83,6 @@ export default function messages(state = initialState, action) {
 }
 
 //подгрузка комментариев
-
 export const loadMessages = (id) => {
   return (dispatch) => {
     dispatch({
@@ -72,20 +97,29 @@ export const loadMessages = (id) => {
           type: 'message/load/success',
           payload: json,
         });
+<<<<<<< HEAD
 
         messagesDownScroll();
+=======
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
       })
-
       .catch((error) => {
         console.error(error);
       });
+<<<<<<< HEAD
 
 
+=======
+    messagesDownScroll();
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
   };
 };
 
 //удаление сообщений
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
 export const setDeleteMessage = (id) => {
   return (dispatch) => {
     dispatch({
@@ -107,7 +141,10 @@ export const setDeleteMessage = (id) => {
 };
 
 // получение текста сообщений
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
 export const setMessageText = (messageText) => {
   return (dispatch) => {
     dispatch({
@@ -118,7 +155,10 @@ export const setMessageText = (messageText) => {
 };
 
 //отправка сообщения
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
 export const sendMessage = (myId, contactId, messageText) => {
   return (dispatch) => {
     dispatch({
@@ -142,6 +182,7 @@ export const sendMessage = (myId, contactId, messageText) => {
           type: 'message/send/success',
           payload: json,
         });
+<<<<<<< HEAD
         messagesDownScroll();
       })
 
@@ -149,11 +190,21 @@ export const sendMessage = (myId, contactId, messageText) => {
         console.error(error);
       });
 
+=======
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    messagesDownScroll();
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
   };
 };
 
 //фильтрация сообщений
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f
 export const setFilterMessages = (text) => {
   return (dispatch) => {
     dispatch({
@@ -162,3 +213,12 @@ export const setFilterMessages = (text) => {
     });
   };
 };
+<<<<<<< HEAD
+=======
+
+export const setSearchForm = () => {
+  return {
+    type: 'searchForm/set',
+  };
+};
+>>>>>>> 59fc10782b0f6c683f3134119e3f4a635edbab8f

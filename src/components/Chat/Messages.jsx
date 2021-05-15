@@ -5,20 +5,19 @@ import { loadMessages } from '../../redux/ducks/messages';
 import MessagesBlocks from './MessagesBlocks';
 import { useParams } from 'react-router-dom';
 
-function MessagesModal(props) {
+function Messages(props) {
   const dispatch = useDispatch();
   const messages = useSelector((state) => state.messages.items);
   const contactsId = useParams().id;
   const filter = useSelector((state) => state.messages.filter);
-
-  useEffect(() => {
-    dispatch(loadMessages(contactsId));
-  }, [contactsId, dispatch]);
-
   const filteredMessages = messages.filter(
     (messages) =>
       messages.content.toUpperCase().indexOf(filter.toUpperCase()) > -1,
   );
+
+  useEffect(() => {
+    dispatch(loadMessages(contactsId));
+  }, [contactsId, dispatch]);
 
   return (
     <div className={styles.messagesModal} id="block_message">
@@ -27,7 +26,7 @@ function MessagesModal(props) {
           return (
             <MessagesBlocks
               message={item}
-              contactsId={contactsId}
+              contactsId={props.idContacts}
               key={item._id}
             />
           );
@@ -37,4 +36,4 @@ function MessagesModal(props) {
   );
 }
 
-export default MessagesModal;
+export default Messages;
