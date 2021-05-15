@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.chats {
+.sidebar {
   width: 20%;
   height: 100vh;
   background-color: #ecf1f5;
@@ -15,7 +15,8 @@
   width: 0;
 }
 
-.contacts-chats ul li, .contact-active {
+.contacts-chats ul li,
+.contact-active {
   width: 230px;
   background-color: #ecf1f5;
   align-items: center;
@@ -24,7 +25,6 @@
   padding: 0 8px;
   height: 70px;
   display: flex;
-
 }
 
 .contacts-chats {
@@ -32,7 +32,7 @@
 }
 
 .contact-active {
-  background-color: white!important;
+  background-color: white !important;
 }
 
 .contact-chat {
@@ -89,11 +89,12 @@ input:hover {
   list-style: none;
 }
 
-.contact-active, .contact-chat:hover  {
+.contact-active,
+.contact-chat:hover {
   background-color: white;
   border: 1px solid #dedede;
   border-radius: 5px;
-  transition: all 0.1s ease 0.1s;
+
   box-shadow: 0 0 8px 3px #dedede;
   cursor: pointer;
 }

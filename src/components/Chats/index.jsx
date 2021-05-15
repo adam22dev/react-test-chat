@@ -6,7 +6,7 @@ import Search from './Search';
 import SkeletonComponent from './SkeletonComponent';
 import Contact from './Contact';
 
-function Chats(props) {
+function Chats() {
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts.items);
   const loading = useSelector((state) => state.contacts.loading);
@@ -25,7 +25,7 @@ function Chats(props) {
   }, []);
 
   return (
-    <div className={styles.chats}>
+    <div className={styles.sidebar}>
       <div className={styles['contacts-search']}>
         <Search />
       </div>
