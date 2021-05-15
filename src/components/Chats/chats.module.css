@@ -11,7 +11,7 @@
   margin: auto;
 }
 
-.chats::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
   width: 0;
 }
 
