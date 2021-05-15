@@ -1,0 +1,41 @@
+import React from 'react';
+import styles from './messages.module.css';
+import { setDeleteMessage } from '../../redux/ducks/messages';
+import { useDispatch } from 'react-redux';
+
+function OutboxMessage(props) {
+  const readMessage = props.message.read;
+  const timeSendMessage = props.message.time;
+  const handleDeleteMessage = () => {
+    dispatch(setDeleteMessage(messageId));
+  };
+  const dispatch = useDispatch();
+  const messageId = props.message._id;
+
+  return (
+    <div>
+      <div className={styles.messageDesignOut}>
+        <div className={styles.messageOutText}>{props.content}</div>
+        <div className={styles.messageTime}>
+          {timeSendMessage.substr(11, 5)}
+        </div>
+        <div className={styles.messageRead}>
+          {readMessage === true ? (
+            <div>
+              <span className="material-icons">done_all</span>
+            </div>
+          ) : (
+            <div>
+              <span className="material-icons">check</span>
+            </div>
+          )}
+        </div>
+        <div className={styles.deleteButton} onClick={handleDeleteMessage}>
+          <span className="material-icons">clear</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default OutboxMessage;

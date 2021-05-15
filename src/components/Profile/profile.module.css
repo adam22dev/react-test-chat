@@ -2,11 +2,8 @@
   width: 20%;
   height: 100vh;
   overflow: hidden;
-  background-color: #D9E5EF;
-
+  background-color: #d9e5ef;
 }
-
-
 
 .userinfo {
   text-align: center;
@@ -15,7 +12,7 @@
 .avatar {
   text-align: center;
   color: white;
-  background-color: #87CEEB;
+  background-color: #87ceeb;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -38,15 +35,13 @@
 }
 .litteicon {
   padding: 0% 4%;
-  cursor :pointer;
+  cursor: pointer;
 }
 .networksettings {
   list-style: none;
   font-size: 16px;
 }
 .mediaicons {
-
-
 }
 .socialnetwork {
   background-color: white;
@@ -68,30 +63,29 @@ span {
   font-size: 16px;
   font-weight: bold;
   margin-left: 20%;
-
 }
 
-.color{
+.color {
   color: red;
 }
-.fullname{
+.fullname {
   text-align: center;
   padding-top: 7%;
   font-weight: 500;
   font-size: 1.3em;
 }
-.media{
+.media {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.nameofsocial{
+.nameofsocial {
   padding-left: 10px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
-.folders{
+.folders {
   background-color: white;
-height: 15%;
+  height: 15%;
   width: 190px;
   margin: auto;
   border-radius: 2%;
@@ -101,17 +95,23 @@ height: 15%;
   font-size: 16px;
   padding: 10px 10px 10px 50px;
 }
-.medialow{
+.medialow {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.online{
+.online {
   color: red;
 }
-.follow{
+.follow {
   width: 30px;
   height: 30px;
-  background-image: linear-gradient(to bottom, #a3c8ff, #8cbafb, #73adf7, #579ff2, #2f92ee);
+  background-image: linear-gradient(
+    to bottom,
+    #a3c8ff,
+    #8cbafb,
+    #73adf7,
+    #579ff2,
+    #2f92ee
+  );
 }
-

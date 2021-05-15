@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './messages.module.css';
 import { useSelector } from 'react-redux';
-import FilterMessages from './FiltrMessages';
+import FilterMessages from './FilterMessages';
 import { useParams } from 'react-router-dom';
 
 function Header(props) {
@@ -10,7 +10,6 @@ function Header(props) {
   const contact = contacts.find((contact) => contact._id === params);
 
   const loadingMessages = useSelector((state) => state.messages.loading);
-
 
   if (loadingMessages) {
     return (
@@ -24,10 +23,7 @@ function Header(props) {
   return (
     <div className={styles.header}>
       <div className={styles['header-center-block']}>
-        <div className={styles.messageSearch}>
-          <span className="material-icons">search</span>
-          <FilterMessages />
-        </div>
+        <FilterMessages />
         <div className={styles.messageAuthorName}>
           <div className={styles.messageAuthorNameTitle}>
             {contact?.fullname}
