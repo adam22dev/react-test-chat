@@ -21,19 +21,17 @@ function Contact(props) {
       className={
         selected === props.contact._id
           ? `${styles['contact-active']} ${styles['contact-chat']}`
-          : `${styles['contact-chat']}`
+
+          : ''
       }
     >
       <div className={styles['contact-avatar']}>
-        <Avatar
-          size="medium"
-          online={props.contact.online}
-          contacts={props.contact}
-        />
+        <Avatar size="small" />
       </div>
       <NavLink to={`/contact/${props.contact._id}`}>
         <div className={styles['contact-names']}>
-          <div className={styles['contact-name']}>{props.contact.fullname}</div>
+          <div className={styles['contact-name']}> {props.contact.fullname}</div>
+
           <div className={styles['contact-last-message']}>
             {lastMessages === undefined
               ? ''
@@ -41,9 +39,13 @@ function Contact(props) {
           </div>
         </div>
       </NavLink>
-      <div className={styles['contact-message-time']}>
-        {dayjs(lastMessages?.time).format('HH:mm')}
-      </div>
+      {lastMessages === undefined ? (
+        ''
+      ) : (
+        <div className={styles['contact-message-time']}>
+          {dayjs(lastMessages?.time).format('HH:mm')}
+        </div>
+      )}
     </li>
   );
 }
