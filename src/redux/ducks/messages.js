@@ -68,7 +68,6 @@ export default function messages(state = initialState, action) {
 }
 
 //подгрузка комментариев
-
 export const loadMessages = (id) => {
   return (dispatch) => {
     dispatch({
@@ -92,7 +91,6 @@ export const loadMessages = (id) => {
 };
 
 //удаление сообщений
-
 export const setDeleteMessage = (id) => {
   return (dispatch) => {
     dispatch({
@@ -114,7 +112,6 @@ export const setDeleteMessage = (id) => {
 };
 
 // получение текста сообщений
-
 export const setMessageText = (messageText) => {
   return (dispatch) => {
     dispatch({
@@ -125,7 +122,6 @@ export const setMessageText = (messageText) => {
 };
 
 //отправка сообщения
-
 export const sendMessage = (myId, contactId, messageText) => {
   return (dispatch) => {
     dispatch({
@@ -158,7 +154,6 @@ export const sendMessage = (myId, contactId, messageText) => {
 };
 
 //фильтрация сообщений
-
 export const setFilterMessages = (text) => {
   return (dispatch) => {
     dispatch({
