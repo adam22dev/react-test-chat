@@ -42,11 +42,11 @@ function MessagesBlocks(props) {
             <div className={styles.messageRead}>
               {readMessage === true ? (
                 <div>
-                  <span className="material-icons">check</span>
+                  <span className="material-icons">done_all</span>
                 </div>
               ) : (
                 <div>
-                  <span className="material-icons">done_all</span>
+                <span className="material-icons">check</span>
                 </div>
               )}
             </div>

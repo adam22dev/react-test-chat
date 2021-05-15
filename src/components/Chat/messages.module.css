@@ -1,13 +1,17 @@
 .messages {
     flex: 1;
     height: 100vh;
+   }
+
+.noSelectedChat {
+    display: flex;
+    height: 100vh;
 }
 
 .chatNan {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    margin-top: 25%;
+    flex: 1;
+    align-self: center;
+    text-align: center;
 }
 
 .header {
