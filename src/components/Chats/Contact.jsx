@@ -10,7 +10,6 @@ function Contact(props) {
   const lastMessages = props.contact.lastMessage;
   const selected = useSelector((state) => state.contacts.selectedContactId);
   const dispatch = useDispatch();
-
   const handleSelectContact = () => {
     dispatch(selectContact(props.contact._id));
   };
