@@ -4,6 +4,7 @@ import Avatar from '../App/Avatar';
 import ContactInfo from './ContactInfo';
 import ContactSocial from './ContactSocial';
 import ContactMedia from './ContactMedia';
+import PropTypes from 'prop-types';
 
 function TopProfileBlock(props) {
   return (
@@ -15,5 +16,9 @@ function TopProfileBlock(props) {
     </div>
   );
 }
+
+TopProfileBlock.propTypes = {
+  contact: PropTypes.object,
+};
 
 export default TopProfileBlock;

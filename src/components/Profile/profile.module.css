@@ -109,12 +109,12 @@
   height: 30px;
   border-radius: 5px;
   background-image: linear-gradient(
-          to bottom,
-          #a3c8ff,
-          #8cbafb,
-          #73adf7,
-          #579ff2,
-          #2f92ee
+    to bottom,
+    #a3c8ff,
+    #8cbafb,
+    #73adf7,
+    #579ff2,
+    #2f92ee
   );
 }
 

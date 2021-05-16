@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './profile.module.css';
 
-function ContactInfoIcons(props) {
+function ContactInfoIcons() {
   return (
     <div className={styles.ContactInfoIcons}>
       <span className="material-icons">phone</span>

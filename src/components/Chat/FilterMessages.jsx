@@ -24,7 +24,9 @@ function FilterMessages() {
       </span>
       {searchForm ? (
         <input type="text" value={filter} onChange={handleFilterMessages} />
-      ) : ('')}
+      ) : (
+        ''
+      )}
       {filter.length !== 0 && (
         <span className="material-icons" onClick={handleMessageSearchClear}>
           clear

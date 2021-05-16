@@ -8,12 +8,10 @@ function ContactsContent() {
   const id = useParams().id;
   const filteredContacts = contacts.filter((contact) => contact._id === id);
 
-  console.log(filteredContacts);
-
   return (
     <div>
       {filteredContacts.map((contact) => {
-        return <TopProfileBlock contact={contact} />;
+        return <TopProfileBlock contact={contact} key={contact._id} />;
       })}
     </div>
   );
