@@ -11,22 +11,16 @@ function Header(props) {
 
   const loadingMessages = useSelector((state) => state.messages.loading);
 
-  if (loadingMessages) {
-    return (
-      <div className={styles.headerLoading}>
-        <span className="material-icons">cached</span>
-        <div>Loading...</div>
-      </div>
-    );
-  }
-
   return (
     <div className={styles.header}>
       <div className={styles['header-center-block']}>
         <FilterMessages />
         <div className={styles.messageAuthorName}>
           <div className={styles.messageAuthorNameTitle}>
-            {contact?.fullname}
+            {loadingMessages ? ( <div className={styles.headerLoading}>
+              <span className="material-icons">cached</span>
+              <div>Loading...</div>
+            </div>) : contact?.fullname}
           </div>
           <div className={styles.messageAuthorNameOnline}>
             {contact?.online === true ? (
