@@ -8,7 +8,6 @@ function Header(props) {
   const params = useParams().id;
   const contacts = useSelector((state) => state.contacts.items);
   const contact = contacts.find((contact) => contact._id === params);
-
   const loadingMessages = useSelector((state) => state.messages.loading);
 
   return (

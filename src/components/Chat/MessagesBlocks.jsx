@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import MessageInfo from './MessageInfo';
 import InboxMessage from './InboxMessage';
 import OutboxMessage from './OutboxMessage';
@@ -7,7 +7,11 @@ import OutboxMessage from './OutboxMessage';
 function MessagesBlocks(props) {
   const profileId = useSelector((state) => state.application.profile._id);
   const toUserId = props.message.toUserId;
+  const loadingMessages = useSelector((state) => state.messages.loading);
 
+  if (loadingMessages) {
+    return ('');
+  }
   if (props.message.type === 'info') {
     return <MessageInfo content={props.message.content} />;
   }
