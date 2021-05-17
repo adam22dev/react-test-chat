@@ -3,7 +3,7 @@ import styles from './messages.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMessageText } from '../../redux/ducks/messages';
 
-function MessageSendForm(props) {
+function MessageSendForm() {
   const messageText = useSelector((state) => state.messages.messageText);
   const dispatch = useDispatch();
   const handleChange = (event) => {

@@ -28,6 +28,7 @@ function Messages(props) {
               message={item}
               contactsId={props.idContacts}
               key={item._id}
+              contact={props.contact}
             />
           );
         })}

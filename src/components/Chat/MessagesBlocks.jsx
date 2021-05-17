@@ -12,7 +12,7 @@ function MessagesBlocks(props) {
     return <MessageInfo content={props.message.content} />;
   }
   if (toUserId === profileId) {
-    return <InboxMessage content={props.message.content} />;
+    return <InboxMessage content={props.message.content} contact={props.contact}/>;
   }
   return (
     <OutboxMessage message={props.message} content={props.message.content} />

@@ -25,4 +25,4 @@ Avatar.propTypes = {
   online: PropTypes.bool,
 };
 
-export default Avatar;
+export default Avatar
