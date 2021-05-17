@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import MessageInfo from './MessageInfo';
 import InboxMessage from './InboxMessage';
 import OutboxMessage from './OutboxMessage';
+import PropTypes from 'prop-types';
 
 function MessagesBlocks(props) {
   const profileId = useSelector((state) => state.application.profile._id);
@@ -10,17 +11,23 @@ function MessagesBlocks(props) {
   const loadingMessages = useSelector((state) => state.messages.loading);
 
   if (loadingMessages) {
-    return ('');
+    return '';
   }
   if (props.message.type === 'info') {
     return <MessageInfo content={props.message.content} />;
   }
   if (toUserId === profileId) {
-    return <InboxMessage content={props.message.content} contact={props.contact}/>;
+    return (
+      <InboxMessage content={props.message.content} contact={props.contact} />
+    );
   }
   return (
     <OutboxMessage message={props.message} content={props.message.content} />
   );
+}
+
+MessagesBlocks.propTypes = {
+  message: PropTypes.object.isRequired,
 }
 
 export default MessagesBlocks;

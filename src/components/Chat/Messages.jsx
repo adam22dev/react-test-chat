@@ -26,9 +26,7 @@ function Messages(props) {
           return (
             <MessagesBlocks
               message={item}
-              contactsId={props.idContacts}
               key={item._id}
-              contact={props.contact}
             />
           );
         })}
