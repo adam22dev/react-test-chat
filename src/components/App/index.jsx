@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './app.module.css';
 import Profile from '../Profile';
 import Sidebar from '../Chats';
 import Chat from '../Chat';
 import { Route, Switch } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { loadProfile } from '../../redux/ducks/application';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadProfile());
+  }, []);
+
   return (
     <div className={styles.container}>
       <Switch>
