@@ -23,7 +23,7 @@ function InboxMessage(props) {
 }
 
 InboxMessage.propTypes = {
-content: PropTypes.string.isRequired,
-}
+  content: PropTypes.string.isRequired,
+};
 
 export default InboxMessage;

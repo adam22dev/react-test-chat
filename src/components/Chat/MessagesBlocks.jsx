@@ -28,6 +28,6 @@ function MessagesBlocks(props) {
 
 MessagesBlocks.propTypes = {
   message: PropTypes.object.isRequired,
-}
+};
 
 export default MessagesBlocks;

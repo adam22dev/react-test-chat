@@ -16,10 +16,14 @@ function Header(props) {
         <FilterMessages />
         <div className={styles.messageAuthorName}>
           <div className={styles.messageAuthorNameTitle}>
-            {loadingMessages ? (<div className={styles.headerLoading}>
-              <span className="material-icons">cached</span>
-              <div>Loading...</div>
-            </div>) : contact?.fullname}
+            {loadingMessages ? (
+              <div className={styles.headerLoading}>
+                <span className="material-icons">cached</span>
+                <div>Loading...</div>
+              </div>
+            ) : (
+              contact?.fullname
+            )}
           </div>
           <div className={styles.messageAuthorNameOnline}>
             {contact?.online === true ? (

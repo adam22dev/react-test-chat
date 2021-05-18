@@ -42,6 +42,6 @@ function OutboxMessage(props) {
 OutboxMessage.propTypes = {
   message: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
-  }
+};
 
 export default OutboxMessage;

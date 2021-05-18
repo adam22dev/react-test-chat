@@ -7,13 +7,13 @@ import WriteMessage from './WriteMessage';
 function Chat(props) {
   return (
     <div className={styles.messages}>
-                <Header
-            setShowProfile={props.setShowProfile}
-            showProfile={props.showProfile}
-          />
-          <Messages />
-          <WriteMessage />
-          </div>
+      <Header
+        setShowProfile={props.setShowProfile}
+        showProfile={props.showProfile}
+      />
+      <Messages />
+      <WriteMessage />
+    </div>
   );
 }
 

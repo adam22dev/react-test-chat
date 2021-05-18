@@ -9,7 +9,7 @@ import Sidebar from '../Chats';
 import Chat from '../Chat';
 import { Route, Switch } from 'react-router-dom';
 
-function App () {
+function App() {
   const [showProfile, setShowProfile] = useState(false);
   const dispatch = useDispatch();
 
@@ -20,13 +20,13 @@ function App () {
 
   return (
     <div className={styles.container}>
-        <Switch>
-        <Route exact path='/contact/:id?'>
+      <Switch>
+        <Route exact path="/contact/:id?">
           <Sidebar />
           <Chat setShowProfile={setShowProfile} showProfile={showProfile} />
           <CSSTransition in={showProfile} unmountOnExit timeout={500}>
-          <Profile />
-        </CSSTransition>
+            <Profile />
+          </CSSTransition>
         </Route>
 
         <Route>
