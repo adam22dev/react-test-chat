@@ -7,6 +7,7 @@ const initialState = {
   messageText: '',
   loadingMessage: false,
   searchForm: false,
+  showProfile: false,
 };
 
 export default function messages(state = initialState, action) {
@@ -60,6 +61,12 @@ export default function messages(state = initialState, action) {
       return {
         ...state,
         messageText: action.payload,
+      };
+
+    case 'change/showProfile':
+      return {
+        ...state,
+        showProfile: action.payload,
       };
 
     default:
@@ -167,5 +174,12 @@ export const setFilterMessages = (text) => {
 export const setSearchForm = () => {
   return {
     type: 'searchForm/set',
+  };
+};
+
+export const changeShowProfile = (showProfile) => {
+  return {
+    type: 'change/showProfile',
+    payload: !showProfile,
   };
 };

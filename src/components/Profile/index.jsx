@@ -5,12 +5,14 @@ import { Route } from 'react-router-dom';
 import ContactsContent from './ContactsContent';
 import { CSSTransition } from 'react-transition-group';
 
-function Profile(props) {
+function Profile() {
   const load = useSelector((state) => state.application.loading);
+  const showProfile = useSelector((state) => state.messages.showProfile);
+
   return load ? (
     'Идёт подгрузка данных'
   ) : (
-    <CSSTransition in={props.showProfile} unmountOnExit timeout={500}>
+    <CSSTransition in={showProfile} unmountOnExit timeout={200}>
       <div className={styles.profile}>
         <Route exact path="/contact/:id?">
           <ContactsContent />

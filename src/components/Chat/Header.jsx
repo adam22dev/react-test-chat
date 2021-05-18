@@ -1,14 +1,23 @@
 import React from 'react';
 import styles from './messages.module.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import FilterMessages from './FilterMessages';
 import { useParams } from 'react-router-dom';
+import { changeShowProfile } from '../../redux/ducks/messages';
 
-function Header(props) {
+function Header() {
+  const dispatch = useDispatch();
   const params = useParams().id;
   const contacts = useSelector((state) => state.contacts.items);
   const contact = contacts.find((contact) => contact._id === params);
   const loadingMessages = useSelector((state) => state.messages.loading);
+  const showProfile = useSelector((state) => state.messages.showProfile);
+
+  console.log(showProfile);
+
+  const handleChangeShow = () => {
+    dispatch(changeShowProfile(showProfile));
+  };
 
   return (
     <div className={styles.header}>
@@ -34,10 +43,7 @@ function Header(props) {
           </div>
         </div>
         <div className={styles.messageSettings}>
-          <span
-            className="material-icons"
-            onClick={() => props.setShowProfile(!props.showProfile)}
-          >
+          <span className="material-icons" onClick={() => handleChangeShow()}>
             settings
           </span>
         </div>
