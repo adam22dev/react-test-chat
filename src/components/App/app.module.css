@@ -12,6 +12,18 @@ body {
   background-color: #eeeeee;
 }
 
+.noSelectedChat {
+  display: flex;
+  height: 100vh;
+  flex: 1;
+}
+
+.chatNan {
+  flex: 1;
+  align-self: center;
+  text-align: center;
+}
+
 .wrap_message_profile {
   flex: 1;
   display: flex;

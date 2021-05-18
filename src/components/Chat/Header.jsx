@@ -8,17 +8,7 @@ function Header(props) {
   const params = useParams().id;
   const contacts = useSelector((state) => state.contacts.items);
   const contact = contacts.find((contact) => contact._id === params);
-
   const loadingMessages = useSelector((state) => state.messages.loading);
-
-  if (loadingMessages) {
-    return (
-      <div className={styles.headerLoading}>
-        <span className="material-icons">cached</span>
-        <div>Loading...</div>
-      </div>
-    );
-  }
 
   return (
     <div className={styles.header}>
@@ -26,7 +16,14 @@ function Header(props) {
         <FilterMessages />
         <div className={styles.messageAuthorName}>
           <div className={styles.messageAuthorNameTitle}>
-            {contact?.fullname}
+            {loadingMessages ? (
+              <div className={styles.headerLoading}>
+                <span className="material-icons">cached</span>
+                <div>Loading...</div>
+              </div>
+            ) : (
+              contact?.fullname
+            )}
           </div>
           <div className={styles.messageAuthorNameOnline}>
             {contact?.online === true ? (

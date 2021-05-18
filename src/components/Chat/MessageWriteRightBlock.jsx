@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './messages.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { sendMessage, setMessageText } from '../../redux/ducks/messages';
+import { sendMessage } from '../../redux/ducks/messages';
 import { useParams } from 'react-router-dom';
 
 function MessageWriteRightBlock(props) {

@@ -3,17 +3,6 @@
   height: 100vh;
 }
 
-.noSelectedChat {
-  display: flex;
-  height: 100vh;
-}
-
-.chatNan {
-  flex: 1;
-  align-self: center;
-  text-align: center;
-}
-
 .header {
   display: flex;
   width: 100%;
@@ -58,6 +47,8 @@
   display: flex;
   align-items: center;
   margin-right: 160px;
+  position: absolute;
+  left: 55%;
 }
 
 .messageAuthorNameTitle {

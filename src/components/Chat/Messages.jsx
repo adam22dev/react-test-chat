@@ -23,13 +23,7 @@ function Messages(props) {
     <div className={styles.messagesModal} id="block_message">
       <div className={styles.messageScroll}>
         {filteredMessages.map((item) => {
-          return (
-            <MessagesBlocks
-              message={item}
-              contactsId={props.idContacts}
-              key={item._id}
-            />
-          );
+          return <MessagesBlocks message={item} key={item._id} />;
         })}
       </div>
     </div>

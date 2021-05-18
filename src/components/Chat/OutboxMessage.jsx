@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './messages.module.css';
 import { setDeleteMessage } from '../../redux/ducks/messages';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function OutboxMessage(props) {
   const readMessage = props.message.read;
@@ -37,5 +38,10 @@ function OutboxMessage(props) {
     </div>
   );
 }
+
+OutboxMessage.propTypes = {
+  message: PropTypes.object.isRequired,
+  content: PropTypes.string.isRequired,
+};
 
 export default OutboxMessage;
