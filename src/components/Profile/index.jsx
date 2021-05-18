@@ -4,6 +4,7 @@ import styles from './profile.module.css';
 import { Route } from 'react-router-dom';
 import ContactsContent from './ContactsContent';
 import { CSSTransition } from 'react-transition-group';
+import profileTransitions from './profileTransition.module.css';
 
 function Profile() {
   const load = useSelector((state) => state.application.loading);
@@ -12,7 +13,12 @@ function Profile() {
   return load ? (
     'Идёт подгрузка данных'
   ) : (
-    <CSSTransition in={showProfile} unmountOnExit timeout={200}>
+    <CSSTransition
+      in={showProfile}
+      unmountOnExit
+      timeout={1000}
+      classNames={profileTransitions}
+    >
       <div className={styles.profile}>
         <Route exact path="/contact/:id?">
           <ContactsContent />

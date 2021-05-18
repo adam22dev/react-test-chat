@@ -1,0 +1,16 @@
+.enter {
+    width: 0;
+}
+
+.enterActive {
+    width: 20%;
+
+}
+
+.exit {
+    width: 20%;
+}
+
+.exitActive {
+    width: 0;
+}

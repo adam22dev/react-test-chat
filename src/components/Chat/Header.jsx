@@ -13,8 +13,6 @@ function Header() {
   const loadingMessages = useSelector((state) => state.messages.loading);
   const showProfile = useSelector((state) => state.messages.showProfile);
 
-  console.log(showProfile);
-
   const handleChangeShow = () => {
     dispatch(changeShowProfile(showProfile));
   };

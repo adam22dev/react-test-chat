@@ -1,8 +1,8 @@
 .profile {
   width: 20%;
   height: 100vh;
-  overflow: hidden;
   background-color: #d9e5ef;
+  transition: 1000ms;
 }
 
 .avatar {
@@ -131,15 +131,15 @@
 }
 
 
-.enter {
+.profile-enter {
   width: 0;
 }
-.enter-active {
-  width: 25%;
+.profile-enter-active {
+  width: 20%;
 }
-.exit {
+.profile-exit{
   width: 0;
 }
-.exit-active {
-  width: 25%;
+.profile-exit-active {
+  width: 20%;
 }

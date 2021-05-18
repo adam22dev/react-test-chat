@@ -4,13 +4,10 @@ import Header from './Header';
 import Messages from './Messages';
 import WriteMessage from './WriteMessage';
 
-function Chat(props) {
+function Chat() {
   return (
     <div className={styles.messages}>
-      <Header
-        setShowProfile={props.setShowProfile}
-        showProfile={props.showProfile}
-      />
+      <Header />
       <Messages />
       <WriteMessage />
     </div>
