@@ -3,7 +3,6 @@ import styles from './messages.module.css';
 import Header from './Header';
 import Messages from './Messages';
 import WriteMessage from './WriteMessage';
-import SelectChatPage from './SelectChatPage';
 
 function Chat(props) {
   return (
@@ -14,8 +13,7 @@ function Chat(props) {
           />
           <Messages />
           <WriteMessage />
-          <SelectChatPage />
-    </div>
+          </div>
   );
 }
 

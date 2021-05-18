@@ -20,7 +20,7 @@ function App () {
 
   return (
     <div className={styles.container}>
-      <Switch>
+        <Switch>
         <Route exact path='/contact/:id?'>
           <Sidebar />
           <Chat setShowProfile={setShowProfile} showProfile={showProfile} />
@@ -31,6 +31,11 @@ function App () {
 
         <Route>
           <Sidebar />
+          <div className={styles.noSelectedChat}>
+            <div className={styles.chatNan}>
+              Please, select a chat to start messaging
+            </div>
+          </div>
         </Route>
       </Switch>
     </div>
