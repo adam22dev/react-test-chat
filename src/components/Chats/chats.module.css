@@ -26,7 +26,18 @@
   height: 70px;
   display: flex;
 }
-
+.contacts-chats ul li:hover{
+  background-color: white;
+  align-items: center;
+  margin: 5px 0;
+  list-style-type: none;
+  padding: 0 8px;
+  height: 70px;
+  display: flex;
+  width: 230px;
+  box-shadow: 0 0 8px 3px #dedede;
+  border-radius: 5px;
+}
 .contacts-chats {
   margin: auto;
 }
@@ -42,6 +53,7 @@
 .contacts-search {
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 
 .contact-search {
