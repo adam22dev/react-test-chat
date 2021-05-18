@@ -24,11 +24,9 @@ function App() {
         <Route exact path="/contact/:id?">
           <Sidebar />
           <Chat setShowProfile={setShowProfile} showProfile={showProfile} />
-          <CSSTransition in={showProfile} unmountOnExit timeout={500}>
-            <Profile />
-          </CSSTransition>
-        </Route>
 
+          <Profile showProfile={showProfile} />
+        </Route>
         <Route>
           <Sidebar />
           <div className={styles.noSelectedChat}>

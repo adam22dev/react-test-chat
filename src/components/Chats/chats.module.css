@@ -26,7 +26,7 @@
   height: 70px;
   display: flex;
 }
-.contacts-chats ul li:hover{
+.contacts-chats ul li:hover {
   background-color: white;
   align-items: center;
   margin: 5px 0;
