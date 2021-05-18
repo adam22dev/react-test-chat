@@ -6,7 +6,7 @@ function InboxMessage(props) {
   return (
     <div className={styles.generalBlockMessageIn}>
       <div className={styles.messageAvatar}>
-        <Avatar size={'small'} />
+        <Avatar size={'small'} online={false} />
       </div>
       <div className={styles.messageDesignIn}>
         <div className={styles.messageInText}>{props.content}</div>
