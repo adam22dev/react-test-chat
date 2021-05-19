@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './app.module.css';
 import Profile from '../Profile';
-import Sidebar from '../Chats';
+import Sidebar from '../SideBar';
 import Chat from '../Chat';
 import { Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';

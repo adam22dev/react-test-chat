@@ -1,11 +1,12 @@
 .enter {
   width: 0;
-  opacity: 0;
+
 }
 
 .enterActive {
   width: 20%;
-  opacity: 1;
+
+
 }
 
 .exit {
