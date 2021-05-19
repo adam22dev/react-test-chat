@@ -130,14 +130,13 @@
   box-sizing: border-box;
 }
 
-
 .profile-enter {
   width: 0;
 }
 .profile-enter-active {
   width: 20%;
 }
-.profile-exit{
+.profile-exit {
   width: 0;
 }
 .profile-exit-active {
