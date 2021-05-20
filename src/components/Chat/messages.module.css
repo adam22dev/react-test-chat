@@ -108,6 +108,7 @@
 
 .messageSendForm {
   width: 100%;
+  padding: 5px  10px;
 }
 
 .messageSendForm input {
@@ -116,8 +117,11 @@
   border: none;
   border-radius: 5px;
   outline: none;
-  font-weight: 500;
   align-items: center;
+  font-size: 18px;
+  color: #808080;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
 }
 
 .messageWriteRightBlock {
