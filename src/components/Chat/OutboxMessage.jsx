@@ -15,7 +15,7 @@ function OutboxMessage(props) {
   const messageId = props.message._id;
 
   return (
-    <div>
+    <div className={styles.messageDesignM}>
       <div className={styles.messageDesignOut}>
         <div className={styles.messageOutText}>{props.content}</div>
         <div className={styles.messageTime}>
