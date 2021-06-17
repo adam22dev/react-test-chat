@@ -36,11 +36,11 @@ body {
 .avatar {
   background-image: linear-gradient(
     to bottom,
-    #a3c8ff,
-    #8cbafb,
-    #73adf7,
-    #579ff2,
-    #2f92ee
+    rgba(192, 230, 243, 0.91),
+    rgba(148, 221, 245, 0.94),
+    rgba(77, 191, 219, 0.94),
+    rgba(34, 146, 183, 0.95),
+    rgba(13, 82, 103, 0.87)
   );
   border-radius: 100%;
   text-align: center;
@@ -52,11 +52,11 @@ body {
 .small {
   background-image: linear-gradient(
     to bottom,
-    #a3c8ff,
-    #8cbafb,
-    #73adf7,
-    #579ff2,
-    #2f92ee
+    rgba(192, 230, 243, 0.91),
+    rgba(148, 221, 245, 0.94),
+    rgba(77, 191, 219, 0.94),
+    rgba(34, 146, 183, 0.95),
+    rgba(13, 82, 103, 0.87)
   );
   border-radius: 100%;
   text-align: center;
@@ -71,16 +71,16 @@ body {
 .medium {
   background-image: linear-gradient(
     to bottom,
-    #a3c8ff,
-    #8cbafb,
-    #73adf7,
-    #579ff2,
-    #2f92ee
+    rgba(192, 230, 243, 0.91),
+    rgba(148, 221, 245, 0.94),
+    rgba(77, 191, 219, 0.94),
+    rgba(34, 146, 183, 0.95),
+    rgba(13, 82, 103, 0.87)
   );
   border-radius: 100%;
   text-align: center;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   pointer-events: none;
   user-select: none;
   width: 35px;
@@ -90,11 +90,11 @@ body {
 .large {
   background-image: linear-gradient(
     to bottom,
-    #a3c8ff,
-    #8cbafb,
-    #73adf7,
-    #579ff2,
-    #2f92ee
+    rgba(192, 230, 243, 0.91),
+    rgba(148, 221, 245, 0.94),
+    rgba(77, 191, 219, 0.94),
+    rgba(34, 146, 183, 0.95),
+    rgba(13, 82, 103, 0.87)
   );
   border-radius: 100%;
   text-align: center;
@@ -105,21 +105,21 @@ body {
   height: 100px;
   line-height: 100px;
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 700;
 }
 .mediumonline {
   background-image: linear-gradient(
     to bottom,
-    #a3c8ff,
-    #8cbafb,
-    #73adf7,
-    #579ff2,
-    #2f92ee
+    rgba(192, 230, 243, 0.91),
+    rgba(148, 221, 245, 0.94),
+    rgba(77, 191, 219, 0.94),
+    rgba(34, 146, 183, 0.95),
+    rgba(13, 82, 103, 0.87)
   );
   border-radius: 100%;
   text-align: center;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   pointer-events: none;
   user-select: none;
   width: 35px;
@@ -136,5 +136,5 @@ body {
   width: 7px;
   height: 7px;
   z-index: 1;
-  background: limegreen;
+  background: rgba(69, 198, 215, 0.86);
 }

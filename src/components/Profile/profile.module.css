@@ -1,8 +1,9 @@
 .profile {
   width: 20%;
   height: 100vh;
-  background-color: #d9e5ef;
+  background-color: #ffffff;
   transition: 1000ms;
+  border-left: 1px solid lightgrey;
 }
 
 .avatar {
@@ -46,13 +47,15 @@
 
 .ContactInfoIcons span {
   font-size: 25px;
-  color: skyblue;
+  color: rgba(64, 168, 195, 0.95);
 }
 
 .ContactSocial {
-  width: 150px;
+  width: 160px;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 55px;
+  border-top: 1px solid #b7b6b6;
+  padding: 15% 0;
 }
 
 .ContactSocialTitle {
@@ -65,7 +68,7 @@
 }
 
 .ContactSocialNetworks span {
-  color: #87ceeb;
+  color: rgba(64, 168, 195, 0.95);
   font-weight: 300;
 }
 
@@ -85,18 +88,16 @@
   margin-top: 5px;
 }
 
-.ContactSocialNetworksInstagramTitle {
-  margin-left: 5px;
-}
-.ContactSocialNetworksTwitterTitle {
-  margin-left: 5px;
-}
-.ContactSocialNetworksFacebookTitle {
+.ContactSocialNetworksInstagramTitle,
+.ContactSocialNetworksTwitterTitle,
+.ContactSocialNetworksFacebookTitle
+{
   margin-left: 5px;
 }
 
 .ContactMedia {
-  margin-top: 40px;
+  border-top: 1px solid #b7b6b6;
+  padding-top: 15%
 }
 
 .ContactMediaTitle {
@@ -107,13 +108,14 @@
   width: 30px;
   height: 30px;
   border-radius: 5px;
+  border: 1px solid rgba(234, 233, 233, 0.5);
   background-image: linear-gradient(
     to bottom,
-    #a3c8ff,
-    #8cbafb,
-    #73adf7,
-    #579ff2,
-    #2f92ee
+    rgba(192, 230, 243, 0.91),
+    rgba(148, 221, 245, 0.94),
+    rgba(77, 191, 219, 0.94),
+    rgba(34, 146, 183, 0.95),
+    rgba(13, 82, 103, 0.87)
   );
 }
 
