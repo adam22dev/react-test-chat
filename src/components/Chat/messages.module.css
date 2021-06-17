@@ -32,7 +32,8 @@
 
 .messageSearch input {
     display: flex;
-    border: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 2px 0 2px 5px  ;
     outline: none;
     border-radius: 3px;
     position: absolute;

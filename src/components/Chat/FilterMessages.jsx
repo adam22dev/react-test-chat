@@ -25,7 +25,7 @@ function FilterMessages() {
         </span>
       </button>
       {searchForm ? (
-        <input type="text" value={filter} onChange={handleFilterMessages} />
+        <input  className={styles.filterMessage} type="text" value={filter} onChange={handleFilterMessages} />
       ) : (
         ''
       )}
