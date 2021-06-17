@@ -29,10 +29,10 @@ function Search() {
         />
 
         {filter.length !== 0 && (
-          <button className={styles['contact-clear-btn']} onClick={handleClear}>
+           <button className={styles['contact-clear-btn']} onClick={handleClear}>
             <span className="material-icons">clear</span>
           </button>
-        )}
+            )}
       </div>
     </div>
   );
